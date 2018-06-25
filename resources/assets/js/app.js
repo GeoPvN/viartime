@@ -18,5 +18,35 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el:"#app",
+    data:{
+        posts:{},
+        description:'',
+    },
+    mounted(){
+    	this.getPosts();
+    },
+    methods:{
+    	getPosts(){
+    		axios.get('getpost')
+    		.then((response)=>{
+    			this.posts = response.data.reverse()
+    		})
+    		.catch(function(error){
+    			console.log(error);
+    		});
+    	},    	
+    	postContent(){
+    		axios.post('home', {
+    			description: this.description
+    		})
+    		.then((response)=>{
+    			this.posts.unshift(response.data);
+    			this.description='';
+    		})
+    		.catch(function(error){
+    			console.log(error);
+    		})
+    	}
+    }
 });

@@ -15,29 +15,20 @@
                     @endif
 
                     <form class="form-group">
-                        <textarea rows="5" cols="5" class="form-control"></textarea>
+                        <textarea rows="5" cols="5" class="form-control" v-model="description"></textarea>
                         <br>
-                        <button type="submit" class="btn btn-primary">Add Post</button>
+                        <button :disabled="!description" class="btn btn-primary" @click.prevent="postContent">Add Post</button>
                     </form>
                 </div>
+            </div>
+            <br>
+            <br>
+            <div>
+                <ul class="list-group" v-for="item in posts" :key="item.key">
+                    <li class="list-group-item">@{{item.description}} <span class="badge badge-success pull-right"></span></li>                    
+                </ul>
             </div>
         </div>
     </div>
 </div>
-@endsection
-@section('script')
-
-<script>
-    // const app = new Vue({
-    //     el:'#app',
-    //     data:{
-    //         posts:{},
-    //         description:'',
-    //         token:'{{ csrf_token() }}',
-    //     },
-    //     methods(){
-
-    //     }
-    // });
-</script>
 @endsection
