@@ -65,16 +65,6 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
-         $user = new User();
-         $user->name = $data['name'];
-         $user->fname = $data['fname'];
-         $user->email = $data['email'];
-         $user->password = Hash::make($data['password']);
-         $user->ip = rand(100000000,999999999);
-         $user->save();
-         return $user;
-
-
         function checkUnumber(){
             $num = mt_rand(1000000000,mt_getrandmax()).mt_rand(1,9);
             $user = DB::table('users')->where('ip', $num)->first();
