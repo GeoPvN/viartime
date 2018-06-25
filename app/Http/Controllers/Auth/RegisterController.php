@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -63,6 +64,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
          $user = new User();
          $user->name = $data['name'];
          $user->fname = $data['fname'];
@@ -72,5 +74,28 @@ class RegisterController extends Controller
          $user->save();
          return $user;
 
+
+        function checkUnumber(){
+            $num = mt_rand(1000000000,mt_getrandmax()).mt_rand(1,9);
+            $user = DB::table('users')->where('ip', $num)->first();
+            if($user){
+                checkUnumber();
+            }
+            return $num;
+        }
+
+        $u_number = checkUnumber();
+
+        $user = new User();
+        $user->name = $data['name'];
+        $user->fname = $data['fname'];
+        $user->email = $data['email'];
+        $user->password = Hash::make($data['password']);
+        $user->ip = $u_number;
+        $user->save();
+        return $user;
+
+
     }
+
 }
