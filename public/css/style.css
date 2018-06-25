@@ -67,6 +67,12 @@ h1, p, span, li, input::placeholder {
       margin: auto; }
       .front-middle .front-right form .gender {
         display: block; }
+      .front-middle .front-right form .registration_radio {
+        width: 30px;
+        display: inline-block;
+        background-color: transparent !important;
+        border-radius: 50px;
+        border: 1px solid red; }
       .front-middle .front-right form .front-submit {
         background: white;
         font-family: 'Shrikhand', cursive;

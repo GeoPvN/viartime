@@ -58,10 +58,10 @@
          <input type="text" class="lastname" placeholder="Lastname" name="fname">
          <input type="email" placeholder="Email" name="email">
          <span>Birthday</span>
-         <input type="date">
+         <input type="date" name="birthday">
          <span class="gender">Gender</span>
-         <input type="checkbox"><span>Male</span>
-         <input type="checkbox"><span>Female</span>
+         <input type="radio" name="sexes_id" value="1" class="registration_radio"><span>Male</span>
+         <input type="radio" name="sexes_id" value="2" class="registration_radio"><span>Female</span>
          <input type="password" placeholder="password" name="password">
          <input type="password" placeholder="password" name="password_confirmation">
          <input type="submit" value="registration" class="front-submit">
