@@ -77,11 +77,13 @@ class RegisterController extends Controller
         $u_number = checkUnumber();
 
         $user = new User();
-        $user->name = $data['name'];
-        $user->fname = $data['fname'];
-        $user->email = $data['email'];
+        $user->name     = $data['name'];
+        $user->fname    = $data['fname'];
+        $user->email    = $data['email'];
+        $user->sexes_id = $data['sexes_id'];
+        $user->birthday = $data['birthday'];
         $user->password = Hash::make($data['password']);
-        $user->ip = $u_number;
+        $user->ip       = $u_number;
         $user->save();
         return $user;
 
