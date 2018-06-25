@@ -14,10 +14,30 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <form class="form-group">
+                        <textarea rows="5" cols="5" class="form-control"></textarea>
+                        <br>
+                        <button type="submit" class="btn btn-primary">Add Post</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endsection
+@section('script')
+
+<script>
+    // const app = new Vue({
+    //     el:'#app',
+    //     data:{
+    //         posts:{},
+    //         description:'',
+    //         token:'{{ csrf_token() }}',
+    //     },
+    //     methods(){
+
+    //     }
+    // });
+</script>
 @endsection

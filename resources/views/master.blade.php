@@ -31,11 +31,14 @@
                 <a href="#"><img src="img/logo.png" alt="" class="front-logo"></a>
              </div> 
             <div class="col-6">
-                    <div class="header-login">
-                <input type="email" placeholder="email">
-                <input type="password" placeholder="password">
-                <input type="submit" value="login" class="header-log-submit">
-                     </div>
+                <div class="header-login">
+                    <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
+                        @csrf
+                        <input type="email" placeholder="email" name="email">
+                        <input type="password" placeholder="password" name="password">
+                        <input type="submit" value="login" class="header-log-submit">
+                    </form>
+                </div>
             </div>
         </div>
      </div>
@@ -49,17 +52,18 @@
         </div>
          <div class="col-lg-6">
              <div class="front-right">
-            <form action="">
-         <input type="text" class="firstname" placeholder="Firstname">
-         <input type="text" class="lastname" placeholder="Lastname">
-         <input type="email" placeholder="Email">
+            <form action="{{ route('register') }}" method="post">
+                 @csrf
+         <input type="text" class="firstname" placeholder="Firstname" name="name">
+         <input type="text" class="lastname" placeholder="Lastname" name="fname">
+         <input type="email" placeholder="Email" name="email">
          <span>Birthday</span>
          <input type="date">
          <span class="gender">Gender</span>
          <input type="checkbox"><span>Male</span>
          <input type="checkbox"><span>Female</span>
-         <input type="password" placeholder="password">
-         <input type="password" placeholder="password">
+         <input type="password" placeholder="password" name="password">
+         <input type="password" placeholder="password" name="password_confirmation">
          <input type="submit" value="registration" class="front-submit">
             </form>
          </div>
