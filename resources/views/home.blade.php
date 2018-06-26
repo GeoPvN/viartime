@@ -25,7 +25,7 @@
             <br>
             <div>
                 <ul class="list-group" v-for="item in posts" :key="item.key">
-                    <li class="list-group-item">@{{item.description}} <span class="badge badge-success pull-right"></span></li>                    
+                    <li class="list-group-item">@{{item.description}} <span style="float: right;"><span class="badge badge-success pull-right">@{{item.user.name}}</span><span class="badge badge-danger pull-right">@{{item.created_at}}</span></span></li>                    
                 </ul>
             </div>
         </div>
