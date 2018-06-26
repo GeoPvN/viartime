@@ -10,8 +10,6 @@
     <div class="col-3"><div class="home-left"></div></div>
     <div class="col-6"><div class="home-center">
 
-
-
         <div class="row justify-content-center">
             <div class="col-md-12">
                 
@@ -23,7 +21,8 @@
                                 <h3><a href="#" class="home-news-title">{{$post->title}}</a></h3>
                                 <div class="row up-account">
                                     <div class="col-lg-2 up-img"><a href="#"><img src="{{asset('img/animated.gif')}}" alt=""></a></div>
-                                    <div class="col-lg-10 up-person"><p><a href="#"></a></p><span><a href="#"> {{$post->ip}}</a></span></div>
+                                    <div class="col-lg-10 up-person"><p><a href="#">{{$post->user->name}}</a></p><span><a href="#"> {{$post->user->ip}}</a></span></div>
+
                                 </div>
                             </div>
                             <div class="up-save">
