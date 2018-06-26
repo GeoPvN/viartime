@@ -47,7 +47,7 @@
             </div>
         
             <div class="news-down-watch">
-            <span class="watch-number"><i class="far fa-eye"></i> 1345</span>
+            <span class="watch-number"><i class="far fa-eye"></i> {{$count}}</span>
             <span class="user-watch-time"><i class="far fa-clock"></i> 1 Hour</span>
             <p class="watch-date"><i class="fas fa-calendar-alt"></i> {{$post->created_at}}</p>
         </div>

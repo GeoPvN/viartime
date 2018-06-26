@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\UserPosts;
 use Illuminate\Http\Request;
 use App\Post;
 use Auth;
+
 
 class PostsController extends Controller
 {
@@ -36,7 +38,16 @@ class PostsController extends Controller
         if (!Auth::user()) {
             abort(404);
         }
+
+        $user_posts = new UserPosts();
+
+        $user_posts->post_id = $id;
+        $user_posts->user_id = Auth::id();
+        $user_posts->save();
+
         $post = Post::findOrFail($id);
-        return view('show', ['post'=>$post]);
+        $countPost = UserPosts::where('post_id',$id)->count();
+
+        return view('show', ['post'=>$post,'count'=>$countPost]);
     }
 }
