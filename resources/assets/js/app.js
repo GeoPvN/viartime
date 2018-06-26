@@ -22,6 +22,8 @@ const app = new Vue({
     data:{
         posts:{},
         description:'',
+        title:'',
+        content:'',
     },
     mounted(){
     	this.getPosts();
@@ -38,11 +40,15 @@ const app = new Vue({
     	},    	
     	postContent(){
     		axios.post('home', {
-    			description: this.description
+    			description: this.description,
+    			title:this.title,
+    			content:this.content,
     		})
     		.then((response)=>{
     			this.posts.unshift(response.data);
     			this.description='';
+    			this.title='';
+    			this.content='';
     		})
     		.catch(function(error){
     			console.log(error);

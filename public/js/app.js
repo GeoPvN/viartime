@@ -13897,7 +13897,9 @@ var app = new Vue({
   el: "#app",
   data: {
     posts: {},
-    description: ''
+    description: '',
+    title: '',
+    content: ''
   },
   mounted: function mounted() {
     this.getPosts();
@@ -13917,10 +13919,14 @@ var app = new Vue({
       var _this2 = this;
 
       axios.post('home', {
-        description: this.description
+        description: this.description,
+        title: this.title,
+        content: this.content
       }).then(function (response) {
         _this2.posts.unshift(response.data);
         _this2.description = '';
+        _this2.title = '';
+        _this2.content = '';
       }).catch(function (error) {
         console.log(error);
       });

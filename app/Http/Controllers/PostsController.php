@@ -16,12 +16,14 @@ class PostsController extends Controller
 
     public function store(Request $request)
     {
-    	$this->validate($request, ['description'=>'required']);
+    	$this->validate($request, ['description'=>'required', 'title'=>'required', 'content'=>'required']);
 
     	$post = new Post();
 
     	$content = $post->create([
-    	    'description'=>$request->description,
+            'description'=>$request->description,
+            'title'=>$request->title,
+    	    'content'=>$request->content,
     	    'user_id'=>Auth::id(),
     	]);
 
