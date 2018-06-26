@@ -24,6 +24,7 @@ const app = new Vue({
         description:'',
         title:'',
         content:'',
+		saved:'Save',
     },
     mounted(){
     	this.getPosts();
@@ -124,8 +125,12 @@ const app = new Vue({
                 post_id:data.id,
             })
                 .then((response)=>{
-                    console.log(response)
-
+                    console.log(response.data)
+					if(response.data == 1){
+                        this.seved = 'Saved';
+					}else{
+                        this.seved = 'Save';
+					}
                 })
                 .catch(function(error){
                     console.log(error);

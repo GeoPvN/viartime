@@ -62,16 +62,17 @@ class PostsController extends Controller
         $user_saved_posts = new UserSavedPosts();
 
         $check_saved_posts = UserSavedPosts::where('post_id',$request->post_id)->where('post_id',Auth::id())->count();
-
+        $saved = 0;
         if($check_saved_posts > 0){
             UserSavedPosts::where('post_id',$request->post_id)->where('post_id',Auth::id())->delete();
         }else{
             $user_saved_posts->post_id = $request->post_id;
             $user_saved_posts->user_id = Auth::id();
             $user_saved_posts->save();
+            $saved = 1;
         }
 
 
-        return response()->json($user_saved_posts);
+        return response()->json($saved);
     }
 }

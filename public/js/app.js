@@ -13899,7 +13899,8 @@ var app = new Vue({
         posts: {},
         description: '',
         title: '',
-        content: ''
+        content: '',
+        saved: 'Save'
     },
     mounted: function mounted() {
         this.getPosts();
@@ -13982,10 +13983,17 @@ var app = new Vue({
             });
         },
         savePost: function savePost(data) {
+            var _this3 = this;
+
             axios.post('savepost', {
                 post_id: data.id
             }).then(function (response) {
-                console.log(response);
+                console.log(response.data);
+                if (response.data == 1) {
+                    _this3.seved = 'Saved';
+                } else {
+                    _this3.seved = 'Save';
+                }
             }).catch(function (error) {
                 console.log(error);
             });

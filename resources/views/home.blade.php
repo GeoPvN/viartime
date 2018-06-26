@@ -79,7 +79,7 @@
                     <div class="row">
                         <div class="col-lg-9"><h3><a href="#" class="home-news-title">@{{item.title}}</a></h3></div>
                         <div class="col-lg-3"><div class="up-save">
-                    <p><a href="#" @click="savePost(item)"><i class="far fa-save"></i> save</a></p>
+                    <p><a href="#" v-on:click="savePost(item)"><i class="far fa-save"></i> <span>save</span></a></p>
                     
                 </div></div>
                     </div>
