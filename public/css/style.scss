@@ -2,11 +2,11 @@ body{
     padding: 0;
     margin:0;
     
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Slabo 27px', serif;
     overflow-x: hidden;
 }
 h1,p,span,li,input::placeholder{
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Slabo 27px', serif;
 }
 .front-page{
     //background-color: #edf0f5;
@@ -206,8 +206,34 @@ box-shadow: 0px 6px 46px 0px rgba(204,198,204,1);
 //      }
 //  }
 // }
+.navbar-laravel{
+   padding: 20px 40px;
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    margin-left: 70px;
+}
 
-
+input[type=text]:focus {
+    width: 400px;
+}
+.home-logo{
+    width: 40px;
+}
+}
+#demo {
+    margin-top:30px;
+}
 .home-center{
     width:80%;
     margin: auto;
@@ -215,52 +241,139 @@ box-shadow: 0px 6px 46px 0px rgba(204,198,204,1);
 .home-news-title{
     color:#000;
     font-size: 22px;
+    overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.up-save{
+    text-align: right;
+    a{
+        color:#000;
+        font-size: 16px;
+        text-transform: uppercase;
+        i{
+            color:#17a2b8;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+.up-img{
+        text-align: center;
+    img{
+        width: 45px;
+        border-radius: 50px;
+        
+    }
+}
+.up-person{
+        
+        
+    p,span{
+        margin:0;
+        padding: 0;
+    }
+    a{
+        color:#000;
+        font-size:17px;
+        cursor: pointer;
+    }
 }
 .up-title {
-    width: 80%;
-    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #efe5e5;
     .up-account{
         
     }
-    .up-img{
-        
-        img{
-            width: 45px;
-            
-        }
-    }
-    .up-person{
-        
-        
-        p,span{
-            margin:0;
-            padding: 0;
-        }
-    }
+    
+    
 }
-.up-save{
-    width: 18%;
-    display: inline-block;
+.up-account{
+    margin-top: 10px;
 }
 
-.news-down-watch,.front-seefull{
+.news-down-watch{
    width: 100%;
    text-align: right;
+}
+.news-down-watch {
+    padding: 20px 0px;
+    .watch-number,.user-watch-time,.watch-date{
+        display: inline-block;
+        padding-right: 15px;
+        font-size: 16px;
+        color:#a0a0a0;
+        &:hover{
+            color:rgb(29, 28, 28);
+            transition: .5s ease;
+            cursor: pointer;
+        }
+    }
+}
+
+.see-full{
+    text-align: right;
+}
+.front-seefull{
+
+    a {
+        display: inline-block;
+        margin: 15px 5px;
+        padding: 10px;
+        font: 700 12px/1 'Open Sans', sans-serif;
+        border-radius: 3px;
+        box-shadow: inset 0 -1px 0 1px rgba(0, 0, 0, 0.1), inset 0 -10px 20px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        color: #777;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  background: #fff;
+}
+a:hover{
+    background: #f5f5f5;
+    text-decoration: none;
+  }
+ 
+    
+    
+        
+        
 }
 .list-group{
     background:#fff;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 40px;
     border-radius: 5px;
     -webkit-box-shadow: 2px 7px 50px -12px rgba(68,102,96,1);
 -moz-box-shadow: 2px 7px 50px -12px rgba(68,102,96,1);
 box-shadow: 2px 7px 50px -12px rgba(68,102,96,1);
+border-top: 8px solid #17a2b8;
+position: relative;
+ .home-news-icon{
+    position: absolute;
+    top: -34px;
+    left: 0%;
+    text-align: center;
+    width: 100%;
+    
+    i{
+    font-size:27px;
+    color:#fff;
+    background:#17a2b8;
+    display: inline-block;
+    border-radius: 50px;
+    padding: 15px 15px;
+    margin:auto;
+    
+    }
+}
 }
 
 
 .home-content-box{
-    border:1px solid grey;
+    border-bottom: 1px solid #efe5e5;
     width: 100%;
-    margin: 20px 0;
     padding: 10px;
 }

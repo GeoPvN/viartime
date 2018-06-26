@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/main.js') }}" defer></script>
+    
     <script src="{{ asset('js/app.js') }}" defer></script>
     
 
@@ -27,10 +27,11 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
+            
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a href="#"><img src="img/logo.png" alt="" class="home-logo"></a>
                 </a>
+                <input type="text" name="search" placeholder="Search..">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -72,7 +73,7 @@
                         @endguest
                     </ul>
                 </div>
-            </div>
+            
         </nav>
 
         <main class="py-4">
