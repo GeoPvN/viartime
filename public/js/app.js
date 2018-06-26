@@ -13980,6 +13980,15 @@ var app = new Vue({
             }).catch(function (error) {
                 console.log(error);
             });
+        },
+        savePost: function savePost(data) {
+            axios.post('savepost', {
+                post_id: data.id
+            }).then(function (response) {
+                console.log(response);
+            }).catch(function (error) {
+                console.log(error);
+            });
         }
     }
 });

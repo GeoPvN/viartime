@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserPosts extends Model
+class UserSavedPosts extends Model
 {
-    protected $fillable = ['user_id', 'post_id', 'end_date'];
+    protected $fillable = ['user_id', 'post_id'];
     protected $with = ['user','post'];
 
     public function user()

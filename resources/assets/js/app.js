@@ -119,6 +119,18 @@ const app = new Vue({
     			console.log(error);
     		})
     	},
+        savePost(data){
+            axios.post('savepost', {
+                post_id:data.id,
+            })
+                .then((response)=>{
+                    console.log(response)
+
+                })
+                .catch(function(error){
+                    console.log(error);
+                })
+        },
 
 
     }
