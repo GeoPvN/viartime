@@ -53,6 +53,19 @@ const app = new Vue({
     		.catch(function(error){
     			console.log(error);
     		})
+    	},
+    	one(data){
+    		axios.post('star', {
+    			star: 1,
+    			post_id:data.id,
+    		})
+    		.then((response)=>{
+    			console.log(response)    			
+    			
+    		})
+    		.catch(function(error){
+    			console.log(error);
+    		})
     	}
     }
 });

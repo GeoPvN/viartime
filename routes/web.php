@@ -22,3 +22,7 @@ Route::get('/getpost ', 'PostsController@getpost');
 
 Route::post('home', 'PostsController@store')->name('store');
 Route::get('post/{id}', 'PostsController@show')->name('show');
+
+Route::post('star', 'RaitingController@star');
+
+
