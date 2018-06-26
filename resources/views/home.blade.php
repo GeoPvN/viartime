@@ -97,13 +97,15 @@
             <span class="user-watch-time"><i class="far fa-clock"></i> 1 Hour</span>
             <p class="watch-date"><i class="fas fa-calendar-alt"></i> @{{item.created_at}}</p>
 
-            <div style="display: inline-block;">
-                <i class="fas fa-star" @click="one(item)"></i>
-                <i class="fas fa-star" @click="two(item)"></i>
-                <i class="fas fa-star" @click="three(item)"></i>
-                <i class="fas fa-star" @click="four(item)"></i>
-                <i class="fas fa-star" @click="five(item)"></i>
-            </div>
+            <div class="rating">
+            <div class="rating">
+<span @click="one(item)">☆</span>
+<span  @click="two(item)">☆</span>
+<span @click="three(item)">☆</span>
+<span @click="four(item)">☆</span>
+<span @click="five(item)">☆</span>
+</div>
+               
         </div>
        
         <!-- <div class="front-post-description">
