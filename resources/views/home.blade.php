@@ -49,10 +49,10 @@
 
             <div class="home-up-box">
                 <div class="up-title">
-                    <h3><a href="#" class="home-news-title">@{{item.title}}</a></h3>
+                    <h3><a href="#" class="home-news-title">@{{item.title.slice(0, 10)}}</a></h3>
                   <div class="row up-account">
                     <div class="col-lg-2 up-img"><a href="#"><img src="img/animated.gif" alt=""></a></div>
-                   <div class="col-lg-10 up-person"><p><a href="#">@{{item.user.name}}</a></p><span><a href="#"> 0123456</a></span></div>
+                   <div class="col-lg-10 up-person"><p><a href="#">@{{item.user.name}}</a></p><span><a href="#"> @{{item.user.ip}}</a></span></div>
                 </div>
                 </div>
                 <div class="up-save">
