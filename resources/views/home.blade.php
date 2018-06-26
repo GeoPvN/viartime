@@ -89,7 +89,7 @@
                 
             </div>
             <div class="home-content-box">
-            @{{item.content}}
+           <p> @{{item.content}}</p>
             </div>
         
             <div class="news-down-watch">
