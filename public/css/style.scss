@@ -140,3 +140,127 @@ box-shadow: 0px 6px 46px 0px rgba(204,198,204,1);
   }
   
 }
+
+
+
+
+
+
+// home page
+
+// .home-header{
+//     height: 70px;
+//     width: 100%;
+//     background-color:#fafafa;
+//     display:inline-block;
+//    .home-headleft{
+//     height: 70px;
+//     position: relative;
+//     display: inline-block;
+//     width: 100%;
+//     form{
+//         display: inline-block;
+//         margin-left: 160px;
+//     }
+//     input[type=text] {
+//         width: 130px;
+//         box-sizing: border-box;
+//         border: 2px solid #ccc;
+//         border-radius: 4px;
+//         font-size: 16px;
+//         background-color: white;
+//         background-image: url('searchicon.png');
+//         background-position: 10px 10px; 
+//         background-repeat: no-repeat;
+//         padding: 12px 20px 12px 40px;
+//         -webkit-transition: width 0.4s ease-in-out;
+//         transition: width 0.4s ease-in-out;
+//     }
+    
+//     input[type=text]:focus {
+//         width: 100%;
+//     }
+//     .head-logo{
+//         width: 60px;
+//         position: relative;
+//         padding: 10px;
+//         margin-left: 30px;
+
+//     }
+//     .talking_head{
+//         width: 150px;
+//         margin: 10px 30px;
+//         position: absolute;
+//         left: 69px;
+//         top: -10px;
+//     }
+//  }
+//  .home-headright{
+//      width: 100%;
+//      display: inline-block;
+//      height: 70px;
+//      margin: 0;
+   
+//      p{
+//         padding: 20px;
+//      }
+//  }
+// }
+
+
+.home-center{
+    width:80%;
+    margin: auto;
+}
+.home-news-title{
+    color:#000;
+    font-size: 22px;
+}
+.up-title {
+    width: 80%;
+    display: inline-block;
+    .up-account{
+        
+    }
+    .up-img{
+        
+        img{
+            width: 45px;
+            
+        }
+    }
+    .up-person{
+        
+        
+        p,span{
+            margin:0;
+            padding: 0;
+        }
+    }
+}
+.up-save{
+    width: 18%;
+    display: inline-block;
+}
+
+.news-down-watch,.front-seefull{
+   width: 100%;
+   text-align: right;
+}
+.list-group{
+    background:#fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 7px 50px -12px rgba(68,102,96,1);
+-moz-box-shadow: 2px 7px 50px -12px rgba(68,102,96,1);
+box-shadow: 2px 7px 50px -12px rgba(68,102,96,1);
+}
+
+
+.home-content-box{
+    border:1px solid grey;
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px;
+}
