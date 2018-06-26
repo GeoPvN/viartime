@@ -31,4 +31,12 @@ class PostsController extends Controller
 
     	return $post->toJson(); 
     }
+    public function show($id)
+    {
+        if (!Auth::user()) {
+            abort(404);
+        }
+        $post = Post::findOrFail($id);
+        return view('show', ['post'=>$post]);
+    }
 }

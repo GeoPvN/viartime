@@ -2,55 +2,70 @@
 
 @section('content')
 
-    
+
 
 
 <!-- News -->
-                <div class="row home-page">
-        <div class="col-3"><div class="home-left"></div></div>
-        <div class="col-6"><div class="home-center">
+<div class="row home-page">
+    <div class="col-3"><div class="home-left"></div></div>
+    <div class="col-6"><div class="home-center">
 
 
 
-            <div class="row justify-content-center">
-            
-        <div class="col-md-12" >
-            <div class="post-toogle">
 
-  <p>Click on the button to Add New Post.</p>
-  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Add New Post</button>
-  <div id="demo" class="collapse">
-  <div class="card">
-                <div class="card-header">Dashboard</div>
+            <div class="row justify-content-center">   
+                <div class="col-md-12" >
+                    <div class="post-toogle">
 
-                <div class="card-body">
-                    @if (session('status'))
+                      <p>Click on the button to Add New Post.</p>
+                      <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Add New Post</button>
+
+                          <div id="demo" class="collapse">
+                           <div class="card">
+                                <div class="card-header">Dashboard</div>
+
+                        <div class="row justify-content-center">
+                        <div class="col-md-12">
+                        <div class="card">
+                    
+
+
+                    <div class="card-body">
+
+                        @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
-                    @endif
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Title" v-model="title">
+                        @endif
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Title" v-model="title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Content" v-model="content">
+                        </div>
+                        <form class="form-group">
+                            <textarea rows="5" cols="5" class="form-control" v-model="description" ></textarea>
+                            <br>
+                            
+                            <br>
+                            <button :disabled="!description||!title||!content" class="btn btn-primary" @click.prevent="postContent">Add Post</button>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Content" v-model="content">
-                    </div>
-                    <form class="form-group">
-        <textarea rows="5" cols="5" class="form-control" v-model="description"  ></textarea>
-                        <br>
-                        
-                        <br>
-                        <button :disabled="!description||!title||!content" class="btn btn-primary" @click.prevent="postContent">Add Post</button>
-                    </form>
+
+                    
+
                 </div>
             </div>
-  </div>
+        </div>
+    </div>
+<div>
 </div>
-        
-            
-            <div>
+<div>
+</div>
+</div>
 
 
+         
 
 
 
@@ -91,25 +106,22 @@
                    <div class="col-lg-7 up-person"><p><a href="#">@{{item.user.name}}</a></p><span><a href="#"> 0123456</a></span></div>
                    <div class="col-lg-3 see-full">
                    <div class="front-seefull">
-            <a href="#"><span>Read More</span></a>
+            <a v-bind:href="'/post/'+ item.id">Read More</a>
         </div>
                    </div>
                 </div>
+            </ul>
         
 
-    </ul>
+                    
 
-        </div></div>
-        <div class="col-3"><div class="home-right"></div></div>
-    </div>
-
-
-
-
-                
+                </div>
+            </div>
+                <div class="col-3"><div class="home-right"></div></div>
             </div>
         </div>
     </div>
+</div>
 </div>
 @endsection
 @section('script')
