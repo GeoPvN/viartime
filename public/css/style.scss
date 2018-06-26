@@ -317,30 +317,30 @@ input[type=text]:focus {
 .see-full{
     text-align: right;
 }
-// .front-seefull{
+.front-seefull{
 
-//     a {
-//         display: inline-block;
-//         margin: 15px 5px;
-//         padding: 10px;
-//         font: 700 12px/1 'Open Sans', sans-serif;
-//         border-radius: 3px;
-//         box-shadow: inset 0 -1px 0 1px rgba(0, 0, 0, 0.1), inset 0 -10px 20px rgba(0, 0, 0, 0.1);
-//         cursor: pointer;
-//         color: #777;
-//   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-//   background: #fff;
-// }
-// a:hover{
-//     background: #f5f5f5;
-//     text-decoration: none;
-//   }
+    a {
+        display: inline-block;
+        margin: 15px 5px;
+        padding: 10px;
+        font: 700 12px/1 'Open Sans', sans-serif;
+        border-radius: 3px;
+        box-shadow: inset 0 -1px 0 1px rgba(0, 0, 0, 0.1), inset 0 -10px 20px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        color: #777;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  background: #fff;
+}
+a:hover{
+    background: #f5f5f5;
+    text-decoration: none;
+  }
  
     
     
         
         
-// }
+}
 .list-group{
     background:#fff;
     padding: 20px;
