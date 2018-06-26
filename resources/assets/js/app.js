@@ -66,6 +66,60 @@ const app = new Vue({
     		.catch(function(error){
     			console.log(error);
     		})
-    	}
+    	},
+    	two(data){
+    		axios.post('star', {
+    			star: 2,
+    			post_id:data.id,
+    		})
+    		.then((response)=>{
+    			console.log(response)    			
+    			
+    		})
+    		.catch(function(error){
+    			console.log(error);
+    		})
+    	},
+    	three(data){
+    		axios.post('star', {
+    			star: 3,
+    			post_id:data.id,
+    		})
+    		.then((response)=>{
+    			console.log(response)    			
+    			
+    		})
+    		.catch(function(error){
+    			console.log(error);
+    		})
+    	},
+    	four(data){
+    		axios.post('star', {
+    			star: 4,
+    			post_id:data.id,
+    		})
+    		.then((response)=>{
+    			console.log(response)    			
+    			
+    		})
+    		.catch(function(error){
+    			console.log(error);
+    		})
+    	},
+    	five(data){
+    		axios.post('star', {
+    			star: 5,
+    			post_id:data.id,
+    		})
+    		.then((response)=>{
+    			console.log(response)    			
+    			
+    		})
+    		.catch(function(error){
+    			console.log(error);
+    		})
+    	},
+
+
     }
 });

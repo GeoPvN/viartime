@@ -13894,54 +13894,94 @@ window.Vue = __webpack_require__(36);
 Vue.component('example-component', __webpack_require__(39));
 
 var app = new Vue({
-  el: "#app",
-  data: {
-    posts: {},
-    description: '',
-    title: '',
-    content: ''
-  },
-  mounted: function mounted() {
-    this.getPosts();
-  },
-
-  methods: {
-    getPosts: function getPosts() {
-      var _this = this;
-
-      axios.get('getpost').then(function (response) {
-        _this.posts = response.data.reverse();
-      }).catch(function (error) {
-        console.log(error);
-      });
+    el: "#app",
+    data: {
+        posts: {},
+        description: '',
+        title: '',
+        content: ''
     },
-    postContent: function postContent() {
-      var _this2 = this;
-
-      axios.post('home', {
-        description: this.description,
-        title: this.title,
-        content: this.content
-      }).then(function (response) {
-        _this2.posts.unshift(response.data);
-        _this2.description = '';
-        _this2.title = '';
-        _this2.content = '';
-      }).catch(function (error) {
-        console.log(error);
-      });
+    mounted: function mounted() {
+        this.getPosts();
     },
-    one: function one(data) {
-      axios.post('star', {
-        star: 1,
-        post_id: data.id
-      }).then(function (response) {
-        console.log(response);
-      }).catch(function (error) {
-        console.log(error);
-      });
+
+    methods: {
+        getPosts: function getPosts() {
+            var _this = this;
+
+            axios.get('getpost').then(function (response) {
+                _this.posts = response.data.reverse();
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
+        postContent: function postContent() {
+            var _this2 = this;
+
+            axios.post('home', {
+                description: this.description,
+                title: this.title,
+                content: this.content
+            }).then(function (response) {
+                _this2.posts.unshift(response.data);
+                _this2.description = '';
+                _this2.title = '';
+                _this2.content = '';
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
+        one: function one(data) {
+            axios.post('star', {
+                star: 1,
+                post_id: data.id
+            }).then(function (response) {
+                console.log(response);
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
+        two: function two(data) {
+            axios.post('star', {
+                star: 2,
+                post_id: data.id
+            }).then(function (response) {
+                console.log(response);
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
+        three: function three(data) {
+            axios.post('star', {
+                star: 3,
+                post_id: data.id
+            }).then(function (response) {
+                console.log(response);
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
+        four: function four(data) {
+            axios.post('star', {
+                star: 4,
+                post_id: data.id
+            }).then(function (response) {
+                console.log(response);
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
+        five: function five(data) {
+            axios.post('star', {
+                star: 5,
+                post_id: data.id
+            }).then(function (response) {
+                console.log(response);
+            }).catch(function (error) {
+                console.log(error);
+            });
+        }
     }
-  }
 });
 
 /***/ }),
