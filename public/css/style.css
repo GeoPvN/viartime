@@ -179,12 +179,12 @@ body {
 
 .news-down-watch {
   padding: 20px 0px; }
-  .news-down-watch .watch-number, .news-down-watch .user-watch-time, .news-down-watch .watch-date {
+  .news-down-watch .watch-number, .news-down-watch .user-watch-time, .news-down-watch .watch-date, .news-down-watch .user-comments {
     display: inline-block;
     padding-right: 15px;
     font-size: 16px;
     color: #a0a0a0; }
-    .news-down-watch .watch-number:hover, .news-down-watch .user-watch-time:hover, .news-down-watch .watch-date:hover {
+    .news-down-watch .watch-number:hover, .news-down-watch .user-watch-time:hover, .news-down-watch .watch-date:hover, .news-down-watch .user-comments:hover {
       color: #1d1c1c;
       -webkit-transition: .5s ease;
       -o-transition: .5s ease;
@@ -271,8 +271,12 @@ body {
     float: right;
     width: 23px;
     font-size: 20px; }
-
+  .star-rating .rating > input:checked ~ label,
   .star-rating .rating:not(:checked) > label:hover,
   .star-rating .rating:not(:checked) > label:hover ~ label {
     color: #FFD700; }
-
+  .star-rating .rating > input:checked + label:hover,
+  .star-rating .rating > input:checked ~ label:hover,
+  .star-rating .rating > label:hover ~ input:checked ~ label,
+  .star-rating .rating > input:checked ~ label:hover ~ label {
+    color: #FFED85; }

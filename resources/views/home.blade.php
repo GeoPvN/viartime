@@ -96,6 +96,7 @@
             <span class="watch-number"><i class="far fa-eye"></i> @{{item.viwe}}</span>
             <span class="user-watch-time"><i class="far fa-clock"></i> 1 Hour</span>
             <p class="watch-date"><i class="fas fa-calendar-alt"></i> @{{item.created_at}}</p>
+            <span class="user-comments"><i class="fas fa-comments"> ( 15 )</i></span>
             
 
 
