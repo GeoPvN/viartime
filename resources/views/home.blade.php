@@ -97,14 +97,8 @@
             <span class="user-watch-time"><i class="far fa-clock"></i> 1 Hour</span>
             <p class="watch-date"><i class="fas fa-calendar-alt"></i> @{{item.created_at}}</p>
 
-            <div class="rating">
-            <div class="rating">
-<span @click="one(item)">☆</span>
-<span  @click="two(item)">☆</span>
-<span @click="three(item)">☆</span>
-<span @click="four(item)">☆</span>
-<span @click="five(item)">☆</span>
-</div>
+
+               
                
         </div>
        
@@ -112,7 +106,48 @@
             <p>@{{item.description}}</p>
         </div>  -->
         <div class="row up-account">
-                    <div class="col-lg-2 up-img"><a href="#"><img src="img/animated.gif" alt=""></a></div>
+                    <div class="col-lg-2 up-img"><a href="#"><img src="img/animated.gif" alt=""></a>
+                    <div class="star-rating">
+               <input type="radio" name="stars" id="star-null"/>
+<input type="radio" name="stars" id="star-1" @click="one(item)"/>
+<input type="radio" name="stars" id="star-2" @click="two(item)"/>
+<input type="radio" name="stars" id="star-3" @click="three(item)"/>
+<input type="radio" name="stars" id="star-4" checked @click="four(item)"/>
+<input type="radio" name="stars" id="star-5" @click="five(item)"/>
+
+<section>
+  <label for="star-1">
+    <svg width="255" height="240" viewBox="0 0 51 48">
+      <path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/>
+    </svg>
+  </label>
+  <label for="star-2">
+    <svg width="255" height="240" viewBox="0 0 51 48">
+      <path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/>
+    </svg>
+  </label>
+  <label for="star-3">
+    <svg width="255" height="240" viewBox="0 0 51 48">
+      <path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/>
+    </svg>
+  </label>
+  <label for="star-4">
+    <svg width="255" height="240" viewBox="0 0 51 48">
+      <path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/>
+    </svg>
+  </label>
+  <label for="star-5">
+    <svg width="255" height="240" viewBox="0 0 51 48">
+      <path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/>
+    </svg>
+  </label>
+  
+</section>  
+
+</div>
+
+                
+                </div><!--ფოტო-->
                    <div class="col-lg-7 up-person"><p><a href="#">@{{item.user.name}}</a></p><span><a href="#"> 0123456</a></span></div>
                    <div class="col-lg-3 see-full">
                    <div class="front-seefull">
