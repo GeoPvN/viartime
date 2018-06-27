@@ -79,7 +79,7 @@
                     <div class="row">
                         <div class="col-lg-9"><h3><a href="#" class="home-news-title">@{{item.title}}</a></h3></div>
                         <div class="col-lg-3"><div class="up-save">
-                    <p><a href="#" v-on:click="savePost(item)"><i class="far fa-save"></i> <span>save</span></a></p>
+                    <p><a href="#" v-on:click="savePost(item)"><i class="far fa-save"></i> <span v-if="item.saved == 0">Save </span><span v-else>Saved</span></a></p>
                     
                 </div></div>
                     </div>
@@ -93,7 +93,7 @@
             </div>
         
             <div class="news-down-watch">
-            <span class="watch-number"><i class="far fa-eye"></i> 1345</span>
+            <span class="watch-number"><i class="far fa-eye"></i> @{{item.viwe}}</span>
             <span class="user-watch-time"><i class="far fa-clock"></i> 1 Hour</span>
             <p class="watch-date"><i class="fas fa-calendar-alt"></i> @{{item.created_at}}</p>
             
@@ -122,13 +122,14 @@
   <label for="star2" title="2 stars" @click="two(item)"></label>
   <input type="radio" id="star1" name="rating" value="1" />
   <label for="star1" title="1 star" @click="one(item)"></label>
+    @{{ item.star }}
 </fieldset>
 
 </div>
 
                 
                 </div><!--ფოტო-->
-                   <div class="col-lg-7 up-person"><p><a href="#">@{{item.user.name}}</a></p><span><a href="#"> 0123456</a></span></div>
+                   <div class="col-lg-7 up-person"><p><a href="#">@{{item.user_name}}</a></p><span><a href="#"> 0123456</a></span></div>
                    <div class="col-lg-3 see-full">
                    <div class="front-seefull">
             <a v-bind:href="'/post/'+ item.id">Read More</a>

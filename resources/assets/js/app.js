@@ -25,6 +25,7 @@ const app = new Vue({
         title:'',
         content:'',
 		saved:'Save',
+		star:0,
     },
     mounted(){
     	this.getPosts();
@@ -33,7 +34,9 @@ const app = new Vue({
     	getPosts(){
     		axios.get('getpost')
     		.then((response)=>{
+    			console.log(response.data.reverse())
     			this.posts = response.data.reverse()
+
     		})
     		.catch(function(error){
     			console.log(error);
@@ -61,8 +64,8 @@ const app = new Vue({
     			other_user_id:data.user_id,
     		})
     		.then((response)=>{
-    			console.log(data.id)    			
-    			
+    			console.log(response.data.star);
+                this.star = response.data.star;
     		})
     		.catch(function(error){
     			console.log(error);
@@ -74,7 +77,8 @@ const app = new Vue({
     			other_user_id:data.user_id,
     		})
     		.then((response)=>{
-    			console.log(data.id)    			
+                console.log(response.data.star);
+                this.star = response.data.star;
     			
     		})
     		.catch(function(error){
@@ -87,7 +91,8 @@ const app = new Vue({
     			other_user_id:data.user_id,
     		})
     		.then((response)=>{
-    			console.log(response)    			
+                console.log(response.data.star);
+                this.star = response.data.star;
     			
     		})
     		.catch(function(error){
@@ -100,7 +105,8 @@ const app = new Vue({
     			other_user_id:data.user_id,
     		})
     		.then((response)=>{
-    			console.log(response)    			
+                console.log(response.data.star);
+                this.star = response.data.star;
     			
     		})
     		.catch(function(error){
@@ -113,7 +119,8 @@ const app = new Vue({
     			other_user_id:data.user_id,
     		})
     		.then((response)=>{
-    			console.log(response)    			
+                console.log(response.data.star);
+                this.star = response.data.star;
     			
     		})
     		.catch(function(error){

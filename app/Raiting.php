@@ -8,4 +8,9 @@ class Raiting extends Model
 {
     protected $fillable = ['star', 'user_id', 'other_user_id'];
 
+    public function post()
+    {
+        return $this->hasMany('App\Post');
+    }
+
 }

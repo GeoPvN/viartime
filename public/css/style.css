@@ -271,12 +271,8 @@ body {
     float: right;
     width: 23px;
     font-size: 20px; }
-  .star-rating .rating > input:checked ~ label,
+
   .star-rating .rating:not(:checked) > label:hover,
   .star-rating .rating:not(:checked) > label:hover ~ label {
     color: #FFD700; }
-  .star-rating .rating > input:checked + label:hover,
-  .star-rating .rating > input:checked ~ label:hover,
-  .star-rating .rating > label:hover ~ input:checked ~ label,
-  .star-rating .rating > input:checked ~ label:hover ~ label {
-    color: #FFED85; }
+
