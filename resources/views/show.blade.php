@@ -67,6 +67,24 @@
             </ul>
 
                 </div>
+                <div style="margin-top: 1rem;">
+                    <ul class="list-group" style="height: 300px; overflow-y: scroll;">
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, accusamus.</li>
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, accusamus.</li>
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, accusamus.</li>
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, accusamus.</li>
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, accusamus.</li>
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, accusamus.</li>
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, accusamus.</li>
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, accusamus.</li>
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, accusamus.</li>
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, accusamus.</li>
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, accusamus.</li>
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, accusamus.</li>
+                    </ul>
+                </div>
+                <textarea class="form-control" id="" cols="1" rows="5" style="margin-top: 1rem;"></textarea>
+                <button class="btn btn-primary">კომენტარის დადება</button>
             </div>
                 <div class="col-3"><div class="home-right"></div></div>
             </div>

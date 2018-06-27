@@ -27,3 +27,4 @@ Route::post('savepost', 'PostsController@save')->name('savepost');
 Route::post('star', 'RaitingController@star');
 
 
+Route::post('/post/{post}/comment', 'CommentController@store');
