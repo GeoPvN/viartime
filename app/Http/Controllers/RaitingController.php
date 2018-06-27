@@ -11,26 +11,32 @@ class RaitingController extends Controller
 
     public function star(Request $request)
     {
-    	$content = Raiting::where('user_id', Auth::id())->where('post_id', $request->post_id)->first();
+    	
+    	if (Auth::id()!=$request->other_user_id) {
 
-    	if ($content!=null) {
-    		$content->star=$request->star;
-    		$content->save();
+    		$content = Raiting::where('user_id', Auth::id())->where('other_user_id', $request->other_user_id)->first();
 
-    	}else{
-    		
-	    	$reiting = new Raiting();    	
+	    	if ($content!=null) {
+	    		$content->star=$request->star;
+	    		$content->save();
 
-	    	$content = $reiting->create([
-	    	    'user_id'=>Auth::id(),
-	    	    'star'=>$request->star,
-	    	    'post_id'=>$request->post_id,
-	    	]);
+	    	}else{
+
+		    	$reiting = new Raiting();    	
+
+		    	$content = $reiting->create([
+		    	    'user_id'=>Auth::id(),
+		    	    'star'=>$request->star,
+		    	    'other_user_id'=>$request->other_user_id,
+		    	]);
+	    	}
+
+
+	    	$post = Raiting::where('id', $content->id)->first();
+
+	    	return $post->toJson(); 
+
     	}
 
-
-    	$post = Raiting::where('id', $content->id)->first();
-
-    	return $post->toJson(); 
     } 
 }

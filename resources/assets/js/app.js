@@ -58,10 +58,10 @@ const app = new Vue({
     	one(data){
     		axios.post('star', {
     			star: 1,
-    			post_id:data.id,
+    			other_user_id:data.user_id,
     		})
     		.then((response)=>{
-    			console.log(response)    			
+    			console.log(data.id)    			
     			
     		})
     		.catch(function(error){
@@ -71,10 +71,10 @@ const app = new Vue({
     	two(data){
     		axios.post('star', {
     			star: 2,
-    			post_id:data.id,
+    			other_user_id:data.user_id,
     		})
     		.then((response)=>{
-    			console.log(response)    			
+    			console.log(data.id)    			
     			
     		})
     		.catch(function(error){
@@ -84,7 +84,7 @@ const app = new Vue({
     	three(data){
     		axios.post('star', {
     			star: 3,
-    			post_id:data.id,
+    			other_user_id:data.user_id,
     		})
     		.then((response)=>{
     			console.log(response)    			
@@ -97,7 +97,7 @@ const app = new Vue({
     	four(data){
     		axios.post('star', {
     			star: 4,
-    			post_id:data.id,
+    			other_user_id:data.user_id,
     		})
     		.then((response)=>{
     			console.log(response)    			
@@ -110,7 +110,7 @@ const app = new Vue({
     	five(data){
     		axios.post('star', {
     			star: 5,
-    			post_id:data.id,
+    			other_user_id:data.user_id,
     		})
     		.then((response)=>{
     			console.log(response)    			

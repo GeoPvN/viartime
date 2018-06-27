@@ -13935,9 +13935,9 @@ var app = new Vue({
         one: function one(data) {
             axios.post('star', {
                 star: 1,
-                post_id: data.id
+                other_user_id: data.user_id
             }).then(function (response) {
-                console.log(response);
+                console.log(data.id);
             }).catch(function (error) {
                 console.log(error);
             });
@@ -13945,9 +13945,9 @@ var app = new Vue({
         two: function two(data) {
             axios.post('star', {
                 star: 2,
-                post_id: data.id
+                other_user_id: data.user_id
             }).then(function (response) {
-                console.log(response);
+                console.log(data.id);
             }).catch(function (error) {
                 console.log(error);
             });
@@ -13955,7 +13955,7 @@ var app = new Vue({
         three: function three(data) {
             axios.post('star', {
                 star: 3,
-                post_id: data.id
+                other_user_id: data.user_id
             }).then(function (response) {
                 console.log(response);
             }).catch(function (error) {
@@ -13965,7 +13965,7 @@ var app = new Vue({
         four: function four(data) {
             axios.post('star', {
                 star: 4,
-                post_id: data.id
+                other_user_id: data.user_id
             }).then(function (response) {
                 console.log(response);
             }).catch(function (error) {
@@ -13975,7 +13975,7 @@ var app = new Vue({
         five: function five(data) {
             axios.post('star', {
                 star: 5,
-                post_id: data.id
+                other_user_id: data.user_id
             }).then(function (response) {
                 console.log(response);
             }).catch(function (error) {
