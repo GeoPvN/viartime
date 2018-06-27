@@ -96,6 +96,7 @@
             <span class="watch-number"><i class="far fa-eye"></i> 1345</span>
             <span class="user-watch-time"><i class="far fa-clock"></i> 1 Hour</span>
             <p class="watch-date"><i class="fas fa-calendar-alt"></i> @{{item.created_at}}</p>
+            
 
 
                
@@ -110,34 +111,18 @@
                     <div class="star-rating">
 
 
-<section>
-  <input type="radio" for="star-1" >
-    <svg width="255" class="star-1" height="240" viewBox="0 0 51 48" @click="one(item)">
-      <path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/>
-    </svg>
-
-  <input type="radio" for="star-2">
-    <svg width="255" class="star-2" height="240" viewBox="0 0 51 48" @click="two(item)">
-      <path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/>
-    </svg>
-
-  <input type="radio" for="star-3">
-    <svg width="255" class="star-3" height="240" viewBox="0 0 51 48" @click="three(item)">
-      <path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/>
-    </svg>
-
-  <input type="radio" for="star-4">
-    <svg width="255" class="star-4" height="240" viewBox="0 0 51 48" @click="four(item)">
-      <path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/>
-    </svg>
-
-  <input type="radio" for="star-5">
-    <svg width="255" class="star-5" height="240" viewBox="0 0 51 48" @click="five(item)">
-      <path d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/>
-    </svg>
-
-  
-</section>  
+<fieldset class="rating">
+  <input type="radio" id="star5" name="rating" value="5" />
+  <label for="star5" title="5 stars" @click="five(item)"></label>
+  <input type="radio" id="star4" name="rating" value="4" />
+  <label for="star4" title="4 stars" @click="four(item)"></label>
+  <input type="radio" id="star3" name="rating" value="3" />
+  <label for="star3" title="3 stars" @click="three(item)"></label>
+  <input type="radio" id="star2" name="rating" value="2" />
+  <label for="star2" title="2 stars" @click="two(item)"></label>
+  <input type="radio" id="star1" name="rating" value="1" />
+  <label for="star1" title="1 star" @click="one(item)"></label>
+</fieldset>
 
 </div>
 
