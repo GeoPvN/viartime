@@ -26,6 +26,7 @@ const app = new Vue({
         content:'',
 		saved:'Save',
 		star:0,
+		toggle: null
     },
     mounted(){
     	this.getPosts();
@@ -145,5 +146,6 @@ const app = new Vue({
         },
 
 
-    }
+	}
+	
 });

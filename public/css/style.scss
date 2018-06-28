@@ -206,6 +206,10 @@ box-shadow: 0px 6px 46px 0px rgba(204,198,204,1);
 //      }
 //  }
 // }
+
+
+
+// -----home-navbar-----
 .navbar-laravel{
    padding: 20px 40px;
 input[type=text] {
@@ -231,12 +235,33 @@ input[type=text]:focus {
     width: 40px;
 }
 }
-#demo {
-    margin-top:30px;
-}
+
 .btn-info {
     background-color:#009688;
     border-color:#009688;
+}
+
+.filter-button{
+    margin-left: 140px;
+}
+#demo {
+    position: absolute;
+    z-index: 999;
+    width: 90%;
+    top: 160px;
+    left:100px;
+}
+#filter{
+    position: absolute;
+    z-index: 999;
+    top: 160px;
+    left:100px;
+    width:300px;
+    select {
+        width:100%;
+        height:150px;
+    }
+
 }
 .home-center{
     width:80%;
@@ -252,12 +277,19 @@ input[type=text]:focus {
 }
 .up-save{
     text-align: right;
+    .fa-tags{
+        font-weight: 600!important;
+        span{
+            font-weight: 400;
+        }
+    }
     a{
         color:#000;
         font-size: 16px;
         text-transform: uppercase;
         i{
             color:#17a2b8;
+            
         }
         &:hover{
             cursor: pointer;
@@ -291,14 +323,12 @@ input[type=text]:focus {
     padding: 10px;
     border-bottom: 1px solid #efe5e5;
     .up-account{
-        
+        margin-top: 10px;
     }
-    
+   
     
 }
-.up-account{
-    margin-top: 10px;
-}
+
 
 .news-down-watch{
    width: 100%;
@@ -347,6 +377,7 @@ a:hover{
         
 }
 .list-group{
+
     background:#fff;
     padding: 20px;
     margin-top: 40px;
@@ -354,7 +385,7 @@ a:hover{
     -webkit-box-shadow: 2px 7px 50px -12px rgba(68,102,96,1);
 -moz-box-shadow: 2px 7px 50px -12px rgba(68,102,96,1);
 box-shadow: 2px 7px 50px -12px rgba(68,102,96,1);
-border-top: 8px solid #009688;
+// border-top: 8px solid #009688;
 position: relative;
  .home-news-icon{
     position: absolute;
@@ -391,13 +422,16 @@ position: relative;
 
 
 
-
-.up-img:hover .star-rating{
+// შეფასების სისტემა
+.up-img:hover .rating{
     display: block;
     
 }
-.star-rating {
+.up-img:hover .rating-point{
     display: none;
+}
+
+.star-rating {
     padding:0 .2em;
     text-align:center;
     position: absolute;
@@ -406,7 +440,14 @@ position: relative;
   -moz-transition-delay: 2s;
   -o-transition-delay: 2s;
   transition-delay: 2s;
+  .rating-point{
+    position: absolute;
+    left: 48px;
+    top: 1px;
+    font-weight: bold;
+  }
   .rating {
+    display: none;
     border: none;
     float: left;
   }
@@ -433,7 +474,131 @@ position: relative;
   .rating > input:checked ~ label:hover ~ label {
     color: #FFED85;
   }
+}
+
+
+
+
+
+
+
+.blog-container {
+    margin: 50px auto;
+    width: 380px;
+    height: 700px;
+    padding: 1.5em;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
+    
+  }
+
+
+
+
+
+//    კომენტარები
+
+  #container {
+    background: #fff;
+    box-shadow: 0px 5px 50px rgba(0,0,0,.2);
+    margin: auto;
+    padding: 10px;
+    position: relative;
+    margin-top: 40px;
+    border-radius: 5px;
   
+  
+  h3 {
+    font-family: Montserrat, sans-serif;
+    font-size: .9em;
+    text-align: center;
+    margin: 0;
+  }
+
+  .comment {
+    margin-top: 30px;
+    padding: 10px;
+  }
+  
+  .photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display:inline-block;
+    margin-right: 20px;
+  }
+  
+  .comment-text {
+
+    display:inline-block;
+  }
+  
+  .name {
+    margin: 0;
+    font-family: Maitree;
+    font-size: .9em;
+    color: #2C3137;
+    font-weight: 600;
+  }
+  
+  .time {
+    margin: 0;
+    font-family: Maitree;
+    font-size: .8em;
+    color: #a0a0a0;
+    padding-left: 20px;
+    font-weight: 400;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Location_dot_grey.svg/500px-Location_dot_grey.svg.png");
+    background-repeat: no-repeat;
+    background-size: 4px;
+    background-position: top 8px left 5px;
+  }
+  
+  p {
+    margin: 0;
+    font-family: Maitree;
+    font-size: .9em;
+    color: #626A73;
+  }
+  
+  /* To clear the div Clearfix, I am using the nth child from 2nd div onwards. */
+  .comment:nth-child(n+2):after {
+      display: block;
+      content: " ";
+      clear: both;
+      }
+  
+  .comment:hover {
+    background: #eaeaea;
+    border-radius: 5px;
+  }
+
+}
 
 
+
+
+
+
+
+
+
+
+// კონტაქტები
+
+.sidebar-contact-box{
+    border:1px solid black;
+    width:80%;
+    margin: auto;
+    .contact-box-out{
+        border:1px solid red;
+        padding: 10px;
+        text-align: center;
+    }
+    .contact-box-in{
+        text-align: left;
+        padding: 10px;
+        background:#fff;
+    }
 }

@@ -30,7 +30,17 @@
             
                 <a class="navbar-brand" href="{{ url('/') }}">
                 <a href="#"><img src="img/logo.png" alt="" class="home-logo"></a>
-                </a>
+               
+               
+
+
+
+
+
+
+
+                
+
                 <input type="text" name="search" placeholder="Search..">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
