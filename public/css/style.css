@@ -388,6 +388,64 @@ body {
     padding: 10px;
     background: #fff; }
 
+.mypopup {
+  width: 400px;
+  border: solid 1px #dcdcdc;
+  display: none; }
+  .mypopup ul {
+    list-style: none; }
+
+.mypopup.active {
+  display: block; }
+
+.mypopup > h1 {
+  background-color: #dcdcdc;
+  font-size: 1em;
+  padding: 5px;
+  margin: 0; }
+
+.mypopup > h1 ul {
+  margin: 0;
+  padding: 0;
+  display: block;
+  float: right;
+  list-style: none; }
+
+.mypopup > h1 ul li {
+  float: left;
+  list-style: none; }
+
+.mypopup > div {
+  width: 100%;
+  height: 300px;
+  padding: 5px; }
+
+.height {
+  overflow-x: hidden !important;
+  height: 43px !important;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 380px;
+  margin: 25px 10px;
+  overflow-y: hidden !important;
+  border: var(--border);
+  border-radius: 5px;
+  background: var(--msger-bg);
+  -webkit-box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2); }
+
 .msger {
   position: fixed;
   right: 0;
@@ -414,6 +472,7 @@ body {
   box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2); }
 
 .msger-header {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -423,7 +482,14 @@ body {
   padding: 10px;
   border-bottom: var(--border);
   background: #eee;
-  color: #666; }
+  color: #666;
+  width: 100%;
+  cursor: pointer; }
+  .msger-header .fa-window-close {
+    position: absolute;
+    z-index: 999999;
+    right: 9px;
+    top: 14px; }
 
 .msger-chat {
   -webkit-box-flex: 1;

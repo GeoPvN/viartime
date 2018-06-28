@@ -17,7 +17,17 @@ $(".new-post-button").click(function(){
  $(".filter-save-button").click(function(){
     $("#filter").toggle(500);
   });
- 
+
+  $(".messclose").click(function(){
+    $(".msger").css("display", "none");
+});
+
+  $(".msger-header").click(function(){
+    $(".msngr").toggle(500);
+    $(".msger").toggleClass("height");  
+});
+
+
 
 });
 

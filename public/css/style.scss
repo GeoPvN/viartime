@@ -604,12 +604,62 @@ position: relative;
 }
 
 
-
+.mypopup{
+    width: 400px;
+    border: solid 1px #dcdcdc;
+    display: none;
+    ul{
+        list-style: none;
+    }
+}
+.mypopup.active{
+    display: block;
+}
+.mypopup > h1{
+    background-color: #dcdcdc;
+    font-size: 1em;
+    padding: 5px;
+    margin: 0;
+}
+.mypopup > h1 ul{
+    margin: 0;
+    padding: 0;
+    display: block;
+    float: right;
+    list-style: none;
+}
+.mypopup > h1 ul li{
+    float: left;
+    list-style: none;
+}
+.mypopup > div {
+    width: 100%;
+    height: 300px;
+    padding: 5px;
+}
 
 
 
 
 // მესენჯერი
+.height{
+    overflow-x: hidden!important;
+    height:43px!important;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 380px;
+    margin: 25px 10px;
+    overflow-y: hidden!important;
+    border: var(--border);
+    border-radius: 5px;
+    background: var(--msger-bg);
+    box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+}
 .msger {
     position: fixed;
     right: 0;
@@ -627,13 +677,23 @@ position: relative;
     background: var(--msger-bg);
     box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
   }
+
   .msger-header {
+      position: relative;
     display: flex;
     justify-content: space-between;
     padding: 10px;
     border-bottom: var(--border);
     background: #eee;
     color: #666;
+    width: 100%;
+    cursor: pointer;
+    .fa-window-close{
+        position: absolute;
+        z-index: 999999;
+        right: 9px;
+        top: 14px;
+    }
   }
   .msger-chat {
     flex: 1;

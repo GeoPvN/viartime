@@ -14,6 +14,7 @@
 </head>
 <body>
 
+
 <nav class="navbar navbar-expand-md navbar-light navbar-laravel bg-light">
             
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -314,17 +315,25 @@
                             </div>
                         </div> -->
 
+
+
+
+
+
 <section class="msger">
   <header class="msger-header">
     <div class="msger-header-title">
       <i class="fas fa-comment-alt"></i> ViarTime-Chat
+      <i class="fas fa-window-close messclose"></i>
     </div>
     <div class="msger-header-options">
-      <span><i class="fas fa-cog"></i></span>
+    <!-- <ul>
+            <li><input type="button" value="_" role="minimize" /></li>
+            <li><input type="button" value="X" role="close" /></li>
+        </ul> -->
     </div>
   </header>
-
-  <main class="msger-chat">
+  <main class="msger-chat" >
     <div class="msg left-msg">
       <div
        class="msg-img"
@@ -366,6 +375,8 @@
     <input type="text" class="msger-input" placeholder="Enter your message...">
     <button type="submit" class="msger-send-btn">Send</button>
   </form>
+  
+
 </section>
 
 
