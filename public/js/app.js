@@ -13893,130 +13893,138 @@ window.Vue = __webpack_require__(36);
 
 Vue.component('example-component', __webpack_require__(39));
 
-var app = new Vue({
-    el: "#app",
-    data: {
-        posts: {},
-        description: '',
-        title: '',
-        content: '',
-        saved: 'Save',
-        star: 0
-    },
-    mounted: function mounted() {
-        this.getPosts();
-    },
+// const app = new Vue({
+//     el:"#app",
+//     data:{
+//         posts:{},
+//         description:'',
+//         title:'',
+//         content:'',
+// 		saved:'Save',
+// 		star:0,
+// 		toggle: null
+//     },
+//     mounted(){
+//     	this.getPosts();
+//     },
+//     methods:{
+//     	getPosts(){
+//     		axios.get('getpost')
+//     		.then((response)=>{
+//     			console.log(response.data.reverse())
+//     			this.posts = response.data.reverse()
 
-    methods: {
-        getPosts: function getPosts() {
-            var _this = this;
+//     		})
+//     		.catch(function(error){
+//     			console.log(error);
+//     		});
+//     	},    	
+//     	postContent(){
+//     		axios.post('home', {
+//     			description: this.description,
+//     			title:this.title,
+//     			content:this.content,
+//     		})
+//     		.then((response)=>{
+//     			this.posts.unshift(response.data);
+//     			this.description='';
+//     			this.title='';
+//     			this.content='';
+//     		})
+//     		.catch(function(error){
+//     			console.log(error);
+//     		})
+//     	},
+//     	one(data){
+//     		axios.post('star', {
+//     			star: 1,
+//     			other_user_id:data.user_id,
+//     		})
+//     		.then((response)=>{
+//     			console.log(response.data.star);
+//                 this.star = response.data.star;
+//     		})
+//     		.catch(function(error){
+//     			console.log(error);
+//     		})
+//     	},
+//     	two(data){
+//     		axios.post('star', {
+//     			star: 2,
+//     			other_user_id:data.user_id,
+//     		})
+//     		.then((response)=>{
+//                 console.log(response.data.star);
+//                 this.star = response.data.star;
 
-            axios.get('getpost').then(function (response) {
-                console.log(response.data.reverse());
-                _this.posts = response.data.reverse();
-            }).catch(function (error) {
-                console.log(error);
-            });
-        },
-        postContent: function postContent() {
-            var _this2 = this;
+//     		})
+//     		.catch(function(error){
+//     			console.log(error);
+//     		})
+//     	},
+//     	three(data){
+//     		axios.post('star', {
+//     			star: 3,
+//     			other_user_id:data.user_id,
+//     		})
+//     		.then((response)=>{
+//                 console.log(response.data.star);
+//                 this.star = response.data.star;
 
-            axios.post('home', {
-                description: this.description,
-                title: this.title,
-                content: this.content
-            }).then(function (response) {
-                _this2.posts.unshift(response.data);
-                _this2.description = '';
-                _this2.title = '';
-                _this2.content = '';
-            }).catch(function (error) {
-                console.log(error);
-            });
-        },
-        one: function one(data) {
-            var _this3 = this;
+//     		})
+//     		.catch(function(error){
+//     			console.log(error);
+//     		})
+//     	},
+//     	four(data){
+//     		axios.post('star', {
+//     			star: 4,
+//     			other_user_id:data.user_id,
+//     		})
+//     		.then((response)=>{
+//                 console.log(response.data.star);
+//                 this.star = response.data.star;
 
-            axios.post('star', {
-                star: 1,
-                other_user_id: data.user_id
-            }).then(function (response) {
-                console.log(response.data.star);
-                _this3.star = response.data.star;
-            }).catch(function (error) {
-                console.log(error);
-            });
-        },
-        two: function two(data) {
-            var _this4 = this;
+//     		})
+//     		.catch(function(error){
+//     			console.log(error);
+//     		})
+//     	},
+//     	five(data){
+//     		axios.post('star', {
+//     			star: 5,
+//     			other_user_id:data.user_id,
+//     		})
+//     		.then((response)=>{
+//                 console.log(response.data.star);
+//                 this.star = response.data.star;
 
-            axios.post('star', {
-                star: 2,
-                other_user_id: data.user_id
-            }).then(function (response) {
-                console.log(response.data.star);
-                _this4.star = response.data.star;
-            }).catch(function (error) {
-                console.log(error);
-            });
-        },
-        three: function three(data) {
-            var _this5 = this;
+//     		})
+//     		.catch(function(error){
+//     			console.log(error);
+//     		})
+//     	},
+//         savePost(data){
+//             axios.post('savepost', {
+//                 post_id:data.id,
+//             })
+//                 .then((response)=>{
+//                     console.log(response.data)
+// 					if(response.data == 1){
+//                         this.seved = 'Saved';
+// 					}else{
+//                         this.seved = 'Save';
+// 					}
+//                 })
+//                 .catch(function(error){
+//                     console.log(error);
+//                 })
+//         },
 
-            axios.post('star', {
-                star: 3,
-                other_user_id: data.user_id
-            }).then(function (response) {
-                console.log(response.data.star);
-                _this5.star = response.data.star;
-            }).catch(function (error) {
-                console.log(error);
-            });
-        },
-        four: function four(data) {
-            var _this6 = this;
 
-            axios.post('star', {
-                star: 4,
-                other_user_id: data.user_id
-            }).then(function (response) {
-                console.log(response.data.star);
-                _this6.star = response.data.star;
-            }).catch(function (error) {
-                console.log(error);
-            });
-        },
-        five: function five(data) {
-            var _this7 = this;
+// 	}
 
-            axios.post('star', {
-                star: 5,
-                other_user_id: data.user_id
-            }).then(function (response) {
-                console.log(response.data.star);
-                _this7.star = response.data.star;
-            }).catch(function (error) {
-                console.log(error);
-            });
-        },
-        savePost: function savePost(data) {
-            var _this8 = this;
-
-            axios.post('savepost', {
-                post_id: data.id
-            }).then(function (response) {
-                console.log(response.data);
-                if (response.data == 1) {
-                    _this8.seved = 'Saved';
-                } else {
-                    _this8.seved = 'Save';
-                }
-            }).catch(function (error) {
-                console.log(error);
-            });
-        }
-    }
-});
+// });
 
 /***/ }),
 /* 13 */

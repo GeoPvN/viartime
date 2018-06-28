@@ -13,7 +13,7 @@ class CommentController extends Controller
     {
     	return response()->json($post->comments()->with('user')->latest()->get());
     }
-    public function store(Request $request)
+    public function store(Request $request, Post $post)
     {
     	$comment = $post->comments()->create([
     		'body'=>$request->body,
