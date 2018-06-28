@@ -389,9 +389,9 @@ body {
     background: #fff; }
 
 .msger {
-  position: absolute;
+  position: fixed;
   right: 0;
-  bottom: 106px;
+  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -403,7 +403,7 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  max-width: 867px;
+  max-width: 380px;
   margin: 25px 10px;
   height: 400px;
   overflow-y: scroll;
