@@ -1,4 +1,4 @@
-
+//ფილტრი და დაპოსტვა 
 $(document).ready(function(){
  $(".filter-button").click(function(){
     $("#demo").css("display", "none");
@@ -11,6 +11,10 @@ $(".new-post-button").click(function(){
         });
 
 
+
+
+
+//ჩათის ჩაკეცვა და დახურვა
  $(".add-post-button").click(function(){
    $("#demo").toggle(500);
  });
@@ -18,18 +22,34 @@ $(".new-post-button").click(function(){
     $("#filter").toggle(500);
   });
 
-  $(".messclose").click(function(){
-    $(".msger").css("display", "none");
+
+  $(".list-item").click(function(){
+    $(".abcd").toggleClass("msger-active");
+     
 });
+  $(".list-item").click(function(){
+    $(".msger").toggleClass("msger-active");
+    $(".msger").removeClass("abcd");
+    $(".msger").removeClass("height");
+     
+});
+
 
   $(".msger-header").click(function(){
-    $(".msngr").toggle(500);
     $(".msger").toggleClass("height");  
 });
-
-
-
 });
+
+
+
+
+
+$(".messclose").click(function(){
+    $(".msger").addClass("abcd");
+    
+});
+
+
 
 
 

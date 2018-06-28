@@ -295,29 +295,27 @@
                     </div>  <!--home-center -->
                 </div>  <!-- center col -->
                     <div class="col-3"><div class="home-right">
-                        <!-- <div class="sidebar-contact-box">
-                            <div class="contact-box-out">
-                                <h3>Contacts</h3>
-                                <div class="contact-box-in">
-                                    <ul>
-                                        <li>Name LastName</li>
-                                        <li>Name LastName</li>
-                                        <li>Name LastName</li>
-                                        <li>Name LastName</li>
-                                        <li>Name LastName</li>
-                                        <li>Name LastName</li>
-                                        <li>Name LastName</li>
-                                        <li>Name LastName</li>
-                                        <li>Name LastName</li>
-                                        <li>Name LastName</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div> -->
+                    <main class="container">
+    <div class="content">
+      <h2 class="title">Contacts</h2>
+      <ul class="list" id="list">
+        <li class="list-item"><i class="fas fa-circle"> <span>Arron Afflalo   </span></i></li>
+        <li class="list-item"><i class="fas fa-circle"> <span>Jamel Artis     </span></i></li>
+        <li class="list-item"><i class="fas fa-circle"> <span>D.J. Augustin   </span></i></li>
+        <li class="list-item"><i class="fas fa-circle"> <span>Khem Birch      </span></i></li>
+        <li class="list-item"><i class="fas fa-circle"> <span>Bismack Biyombo </span></i></li>
+        <li class="list-item"><i class="fas fa-circle"> <span>Evan Fournier   </span></i></li>
+        <li class="list-item"><i class="fas fa-circle"> <span>Aaron Gordon    </span></i></li>
+
+      </ul>
+    </div>
+  </main>
 
 
 
 
+
+<div class="msger-box">
 
 
 <section class="msger">
@@ -378,7 +376,7 @@
   
 
 </section>
-
+</div>
 
 
                 </div></div>

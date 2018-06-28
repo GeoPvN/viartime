@@ -642,6 +642,26 @@ position: relative;
 
 
 // მესენჯერი
+.msger-box{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+.msger {
+    display: none;
+    position: relative;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 380px;
+    margin: 25px 10px;
+    height: 400px;
+    overflow-y: scroll;
+    border: var(--border);
+    border-radius: 5px;
+    background: var(--msger-bg);
+    box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+  }
 .height{
     overflow-x: hidden!important;
     height:43px!important;
@@ -660,7 +680,7 @@ position: relative;
     background: var(--msger-bg);
     box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
 }
-.msger {
+.msger-active{
     position: fixed;
     right: 0;
     bottom: 0;
@@ -676,7 +696,24 @@ position: relative;
     border-radius: 5px;
     background: var(--msger-bg);
     box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
-  }
+}
+.abcd{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: none;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 380px;
+    margin: 25px 10px;
+    height: 400px;
+    overflow-y: scroll;
+    border: var(--border);
+    border-radius: 5px;
+    background: var(--msger-bg);
+    box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+}
 
   .msger-header {
       position: relative;
@@ -690,7 +727,7 @@ position: relative;
     cursor: pointer;
     .fa-window-close{
         position: absolute;
-        z-index: 999999;
+        z-index: 9999999999;
         right: 9px;
         top: 14px;
     }
@@ -801,4 +838,50 @@ position: relative;
 
 
 
+  
+
+
+//   კონტაქტები
+.container {
+    width: 90%;
+    max-width: 300px;
+    margin: 40px auto 0;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    border-radius: 6px;
+  }
+  .content {
+    padding: 16px 8px 0;
+  }
+  .title {
+    margin: 0 0 16px 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #5d6369;
+  }
+  
+  .list {
+    margin: 0 0 8px;
+    padding: 0;
+    list-style: none;
+    cursor: pointer;
+    i{
+        color: green;
+    }
+    span{
+        padding-left: 10px;
+        color: #000;
+        
+    }
+  }
+  .list-item {
+    font-size: 12px;
+    padding: 10px;
+    font-weight: 500;
+    color: #5d6369;
+    border-radius: 3px;
+  }
+  .list-item:hover {
+    background-color: #e7f2fa;
+  }
   
