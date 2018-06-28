@@ -14,17 +14,15 @@ class PostsController extends Controller
 	public function getpost()
 	{
 		//$posts = Post::all();
-		// dd($posts->user->name);
         $posts = DB::table('posts')
             ->leftJoin('users', 'users.id', '=', 'posts.user_id')
             ->leftJoin('user_posts', 'posts.id', '=', 'user_posts.post_id')
             ->leftJoin('user_saved_posts', function($join)
             {
                 $join->on('user_saved_posts.post_id', '=', 'posts.id');
-                //$join->on('user_saved_posts.user_id', '=', '$r');
+                //$join->on('user_saved_posts.user_id', '=', '');
             })
-            ->leftJoin('raitings', 'posts.user_id', '=', 'raitings.other_user_id')
-            ->select(DB::raw('posts.*, users.name as user_name, (select ROUND(sum(r.star) / COUNT(*),2) from raitings as r where r.other_user_id = `posts`.user_id) as star, count(user_posts.id) as viwe, count(user_saved_posts.id) as saved'))
+            ->select(DB::raw('posts.*, users.name as user_name, (select ROUND(sum(r.star) / COUNT(*),2) from raitings as r where r.other_user_id = `posts`.user_id) as star, SUM(IF(user_posts.id != "",1,0)) as viwe, sum(if(user_saved_posts.id != "",1,0)) as saved'))
             ->groupBy('posts.id')
             ->orderByRaw('posts.id DESC')
             ->get();
