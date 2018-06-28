@@ -26,6 +26,7 @@ class PostsController extends Controller
             ->leftJoin('raitings', 'posts.user_id', '=', 'raitings.other_user_id')
             ->select(DB::raw('posts.*, users.name as user_name, (select ROUND(sum(r.star) / COUNT(*),2) from raitings as r where r.other_user_id = `posts`.user_id) as star, count(user_posts.id) as viwe, count(user_saved_posts.id) as saved'))
             ->groupBy('posts.id')
+            ->orderByRaw('posts.id DESC')
             ->get();
 
 		return response()->json($posts);
