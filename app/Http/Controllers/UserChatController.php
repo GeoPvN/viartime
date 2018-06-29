@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use Auth;
 use App\UserChat;
 use Illuminate\Http\Request;
 
@@ -12,9 +14,12 @@ class UserChatController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        //
+        $getcontents = UserChat::where('user_sender_id','=', Auth::id())->get();
+        $users = User::where('id', '=', Auth::id())->get();
+        $chatUser = User::where('id', '=',$id)->get();
+        return view('chat', ['users'=>$users,'chatUser'=>$chatUser,'getcontents'=>$getcontents]);
     }
 
     /**
@@ -35,7 +40,14 @@ class UserChatController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $userchat = new UserChat();
+
+        $userchat->user_sender_id = $request->user_sender_id;
+        $userchat->user_receiver_id = $request->user_receiver_id;
+        $userchat->body = $request->body;
+        $userchat->save();
+
+        return response()->json($request);
     }
 
     /**
