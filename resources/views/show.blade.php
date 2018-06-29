@@ -89,7 +89,7 @@
 
                         <ul class="list-group">
                     <div class="home-news-icon">
-                    <i class="fas fa-link"></i>
+                 
                  </div>
                 <div class="home-up-box">
                     <div class="up-title">
@@ -131,15 +131,38 @@
                 </ul>
 
                     </div>
-                    <div style="margin-top: 1rem;">
-                        <ul   class="list-group" style="height: 300px; overflow-y: scroll;">
-                            <li v-for="comment in comments" class="list-group-item">@{{comment.body}} <span style="float: right;" class="badge badge-success">@{{comment.user.name}}</span></li>
-                        </ul>
-                    </div>
-                    {{-- <div v-html="postId">{{$post->id}}</div> --}}
 
-                    <textarea v-model="commentBox" class="form-control" id="" cols="1" rows="5" style="margin-top: 1rem;"></textarea>
-                    <button class="btn btn-primary"  @click="postComment()">კომენტარის დადება</button>
+
+                    
+
+        <div class="add-comments-box">
+                    <div class="comment-section-title text-center"><h3>Comments</h3></div>
+                   {{-- <div v-html="postId">{{$post->id}}</div> --}}
+    <textarea v-model="commentBox" class="form-control" id="" cols="1" rows="5" style="margin-top: 1rem;"></textarea>
+                <div class="text-center">
+                    <button class="btn btn-primary pull-right"  @click="postComment()">Add Comment</button>
+                </div>
+        </div>
+
+                <div class="post-comment-section">       
+                    <div class="comment" v-for="comment in comments">
+                        <div class="row">
+                                <div class="col-2">
+                                    <img src="https://scontent.ftbs5-1.fna.fbcdn.net/v/t31.0-8/24879691_1723230304375482_7123055198539894009_o.jpg?_nc_cat=0&oh=840e42e8ea0f40a67b1561e9b189edd3&oe=5BA154AD" class="photo">
+                                </div>
+                                <div class="col-10">
+                                    <div class="comment-text">
+                                        <p class="name post-com-name">@{{comment.user.name}} <span class="time post-com-time">2 hours ago</span> </p>
+                                        <p class="post-com-body">@{{comment.body}}</p>
+                                    </div>
+                                </div>
+                        </div><!--row -->
+                     </div> <!-- .comment -->
+                </div>
+
+                        
+                  
+                   
                 </div>
                     <div class="col-3"><div class="home-right"></div></div>
                 </div>

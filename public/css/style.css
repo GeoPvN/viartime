@@ -695,3 +695,39 @@ body {
 
 .list-item:hover {
   background-color: #e7f2fa; }
+
+.add-comments-box {
+  margin-top: 5em; }
+  .add-comments-box textarea {
+    height: 256px;
+    resize: none; }
+
+.post-comment-section {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  height: auto;
+  overflow-y: hidden;
+  overflow-x: hidden; }
+  .post-comment-section .comment-section-title {
+    width: 100%;
+    background: #fff;
+    padding: 10px 0; }
+  .post-comment-section img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: inline-block;
+    margin-right: 20px; }
+  .post-comment-section .comment {
+    padding: 20px;
+    background: #eff1f3;
+    margin-top: 5px;
+    border-radius: 5px; }
+  .post-comment-section .post-com-name {
+    font-weight: bold; }
+  .post-comment-section .post-com-time {
+    font-weight: normal;
+    margin-left: 30px;
+    font-style: italic; }
+  .post-comment-section .post-com-body {
+    font-family: 'Indie Flower', cursive; }
