@@ -1,21 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <meta charset="UTF-8">
-   <title>Document</title>
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-   <meta name="csrf-token" content="{{ csrf_token() }}">
+@extends('main')
+@section('content')
 
-  <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-
-</head>
-<body>
-
-
-@include('layouts.header')
 
 <div id="app">
     <div class="post-toogle">
@@ -323,143 +308,143 @@
 </div>
 
 
-  
-    <script src="{{ asset('js/main.js') }}" defer></script>
-    <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
-    <script type="text/javascript">
-      const app = new Vue({
-          el:"#app",
-          data:{
-              posts:{},
-              description:'',
-              title:'',
-              content:'',
-         saved:'Save',
-         star:0,
-              comments: {},
-              commentBox:'',
-              postId:'',
-          },
-          mounted(){
-           this.getPosts();
-          },
-          methods:{
-           getPosts(){
-             axios.get('getpost')
-             .then((response)=>{
-               console.log(response.data.reverse())
-               this.posts = response.data.reverse()
 
-             })
-             .catch(function(error){
-               console.log(error);
-             });
-           },      
-           postContent(){
-             axios.post('home', {
-               description: this.description,
-               title:this.title,
-               content:this.content,
-             })
-             .then((response)=>{
-               this.posts.unshift(response.data);
-               this.description='';
-               this.title='';
-               this.content='';
-             })
-             .catch(function(error){
-               console.log(error);
-             })
-           },
-           one(data){
-             axios.post('star', {
-               star: 1,
-               other_user_id:data.user_id,
-             })
-             .then((response)=>{
-               console.log(response.data.star);
-                      this.star = response.data.star;
-             })
-             .catch(function(error){
-               console.log(error);
-             })
-           },
-           two(data){
-             axios.post('star', {
-               star: 2,
-               other_user_id:data.user_id,
-             })
-             .then((response)=>{
-                      console.log(response.data.star);
-                      this.star = response.data.star;
-                
-             })
-             .catch(function(error){
-               console.log(error);
-             })
-           },
-           three(data){
-             axios.post('star', {
-               star: 3,
-               other_user_id:data.user_id,
-             })
-             .then((response)=>{
-                      console.log(response.data.star);
-                      this.star = response.data.star;
-                
-             })
-             .catch(function(error){
-               console.log(error);
-             })
-           },
-           four(data){
-             axios.post('star', {
-               star: 4,
-               other_user_id:data.user_id,
-             })
-             .then((response)=>{
-                      console.log(response.data.star);
-                      this.star = response.data.star;
-                
-             })
-             .catch(function(error){
-               console.log(error);
-             })
-           },
-           five(data){
-             axios.post('star', {
-               star: 5,
-               other_user_id:data.user_id,
-             })
-             .then((response)=>{
-                      console.log(response.data.star);
-                      this.star = response.data.star;
-                
-             })
-             .catch(function(error){
-               console.log(error);
-             })
-           },
-              savePost(data){
-                  axios.post('savepost', {
-                      post_id:data.id,
+@endsection
+@section('script')
+
+<script type="text/javascript">
+  const app = new Vue({
+      el:"#app",
+      data:{
+          posts:{},
+          description:'',
+          title:'',
+          content:'',
+     saved:'Save',
+     star:0,
+          comments: {},
+          commentBox:'',
+          postId:'',
+      },
+      mounted(){
+       this.getPosts();
+      },
+      methods:{
+       getPosts(){
+         axios.get('getpost')
+         .then((response)=>{
+           console.log(response.data.reverse())
+           this.posts = response.data.reverse()
+
+         })
+         .catch(function(error){
+           console.log(error);
+         });
+       },      
+       postContent(){
+         axios.post('home', {
+           description: this.description,
+           title:this.title,
+           content:this.content,
+         })
+         .then((response)=>{
+           this.posts.unshift(response.data);
+           this.description='';
+           this.title='';
+           this.content='';
+         })
+         .catch(function(error){
+           console.log(error);
+         })
+       },
+       one(data){
+         axios.post('star', {
+           star: 1,
+           other_user_id:data.user_id,
+         })
+         .then((response)=>{
+           console.log(response.data.star);
+                  this.star = response.data.star;
+         })
+         .catch(function(error){
+           console.log(error);
+         })
+       },
+       two(data){
+         axios.post('star', {
+           star: 2,
+           other_user_id:data.user_id,
+         })
+         .then((response)=>{
+                  console.log(response.data.star);
+                  this.star = response.data.star;
+            
+         })
+         .catch(function(error){
+           console.log(error);
+         })
+       },
+       three(data){
+         axios.post('star', {
+           star: 3,
+           other_user_id:data.user_id,
+         })
+         .then((response)=>{
+                  console.log(response.data.star);
+                  this.star = response.data.star;
+            
+         })
+         .catch(function(error){
+           console.log(error);
+         })
+       },
+       four(data){
+         axios.post('star', {
+           star: 4,
+           other_user_id:data.user_id,
+         })
+         .then((response)=>{
+                  console.log(response.data.star);
+                  this.star = response.data.star;
+            
+         })
+         .catch(function(error){
+           console.log(error);
+         })
+       },
+       five(data){
+         axios.post('star', {
+           star: 5,
+           other_user_id:data.user_id,
+         })
+         .then((response)=>{
+                  console.log(response.data.star);
+                  this.star = response.data.star;
+            
+         })
+         .catch(function(error){
+           console.log(error);
+         })
+       },
+          savePost(data){
+              axios.post('savepost', {
+                  post_id:data.id,
+              })
+                  .then((response)=>{
+                      console.log(response.data)
+           if(response.data == 1){
+                          this.seved = 'Saved';
+           }else{
+                          this.seved = 'Save';
+           }
                   })
-                      .then((response)=>{
-                          console.log(response.data)
-               if(response.data == 1){
-                              this.seved = 'Saved';
-               }else{
-                              this.seved = 'Save';
-               }
-                      })
-                      .catch(function(error){
-                          console.log(error);
-                      })
-              },
+                  .catch(function(error){
+                      console.log(error);
+                  })
+          },
 
 
-          }
-      });
-    </script>
-</body>
-</html>
+      }
+  });
+</script>
+@endsection

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-light navbar-laravel bg-light">
             
                 <a class="navbar-brand" href="{{ url('/') }}">
-                <a href="#"><img src="img/logo.png" alt="" class="home-logo"></a>
+                <a href="#"><img src="{{asset('img/logo.png')}}" alt="" class="home-logo"></a>
                
                
 
