@@ -5,66 +5,92 @@
 		<div class="home-left">
 
 
-					<div class="user-profile-sidebar">
+					<div class="user-profile-sidebar text-center">
 						<div class="row">
 								<div class="col-6">
 									<a href="{{url('user/'. Auth::user()->ip)}}"><img src="http://127.0.0.1:8000/img/animated.gif" alt=""></a>
 								</div>
-								<div class="col-6">
-									<span><a href="{{url('user/'. Auth::user()->ip)}}">{{ Auth::user()->name }}</a></span>
-									<span><a href="{{url('user/'. Auth::user()->ip)}}">{{ Auth::user()->ip}}</a></span>
-									<span><a href="{{url('user/'. Auth::user()->ip)}}">4.5</a></span>
+								<div class="col-6 text-left">
+									<span><a href="{{url('user/'. Auth::user()->ip)}}"><i class="fas fa-user"> {{ Auth::user()->name }}</i></a></span>
+									<span><a href="{{url('user/'. Auth::user()->ip)}}"><i class="fas fa-id-card"> {{ Auth::user()->ip}}</i></a></span>
+									<span><a href="{{url('user/'. Auth::user()->ip)}}"><i class="fas fa-star"> 4.5 </i></a></span>
 								</div>
 						</div> <!-- row -->
 					</div><!-- user profile sidebar -->
 
-				<div class="sidebar-birthday">
-					<span>17/25/18</span>
+
+				<div class="sidebar-birthday text-center">
+					<h4>Birthday Date</h4>
+					<span><b>17/25/18</b></span>
 				</div>
 
 
 				<div class="sidebar-interesdet">
+					<div class="interested-title text-center"><h4>Interested</h4></div>
 					<ul>
-						<li>Sport</li>
-						<li>Art</li>
-						<li>Drink</li>
-						<li>Hiking</li>
-						<li>Fishing</li>
+						<li><i class="far fa-heart"> Sport   </i></li>
+						<li><i class="far fa-heart"> Art     </i></li>
+						<li><i class="far fa-heart"> Drink   </i></li>
+						<li><i class="far fa-heart"> Hiking  </i></li>
+						<li><i class="far fa-heart"> Fishing </i></li>
+						<li><i class="far fa-heart"> Sport   </i></li>
+						<li><i class="far fa-heart"> Art     </i></li>
+						<li><i class="far fa-heart"> Drink   </i></li>
 					</ul>
 				</div>
 
 				<div class="sidebar-about">
+					<div class="sidebar-about-title text-center"><h4>About</h4></div>
 					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium architecto necessitatibus qui esse. Maiores expedita mollitia natus eum quia. Rerum nobis libero perspiciatis in natus praesentium nostrum aliquid quaerat quam!</p>
 				</div>
 
 
-				<div class="sidebar-gallery">
-					<div class="row">
-						<div class="col-4"><img src="https://www.w3schools.com/css/img_5terre.jpg"></div>
-						<div class="col-4"><img src="https://www.w3schools.com/css/img_forest.jpg"></div>
-						<div class="col-4"><img src="https://www.w3schools.com/css/img_mountains.jpg"></div>
+				<div class="sidebar-gallery ">
+					<div class="sidebar-gallery-title text-center"><h4>Gallery</h4></div>
+					<div class="row text-center">
+						<div class="col-4"><img src="https://www.w3schools.com/css/img_5terre.jpg" data-toggle="modal" data-target=".sidebar-image-modal"></div>
+						<div class="col-4"><img src="https://www.w3schools.com/css/img_forest.jpg" data-toggle="modal" data-target=".sidebar-image-modal"></div>
+						<div class="col-4"><img src="https://www.w3schools.com/css/img_mountains.jpg" data-toggle="modal" data-target=".sidebar-image-modal"></div>
 					</div>
 				</div>
 
-		</div>
+
+       <!-- image modal  -->
+			<div class="modal fade sidebar-image-modal"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<img src="https://www.w3schools.com/css/img_5terre.jpg">
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+					</div>
+				</div>
+			</div>
+		<!-- /image modal  -->
+
+		
+			
+
+
+		</div><!-- home left -->
 	</div>
 	<div class="col-6">
 		<div class="home-center">
 
 
-		<div id="exTab1">
+			<div id="exTab1">
 
-		<ul  class="nav nav-pills">
-			<li class="active"><a  href="#1a" data-toggle="tab"><button type="button" class="btn btn-primary">Posts</button></a></li>
-			<li><a href="#2a" data-toggle="tab"><button type="button" class="btn btn-primary">Saved Posts</button></a></li>	
-		</ul>
+					<ul  class="nav nav-pills">
+						<li class="active"><a  href="#1a" data-toggle="tab"><button type="button" class="btn btn-primary">Posts</button></a></li>
+						<li><a href="#2a" data-toggle="tab"><button type="button" class="btn btn-primary">Saved Posts</button></a></li>	
+					</ul>
 
 		
-		<div class="tab-content clearfix">
+			<div class="tab-content clearfix">
 
 		
 				
-			  <div class="tab-pane active" id="1a"><!-- tab 1 -->
+			  	<div class="tab-pane active" id="1a"><!-- tab 1 -->
 		       
 			  <!-- პოსტები -->
 			  @foreach($posts as $post)
@@ -161,8 +187,8 @@
 
 
 
-						</div>
-					</div>
+		</div> <!-- home center -->
+	</div> <!-- col-6 -->
 				
 
 				<div class="col-3">

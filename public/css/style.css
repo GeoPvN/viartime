@@ -6,17 +6,17 @@ body {
 #navbarSupportedContent {
   display: inline-block !important; }
 
-.header-profile, .user-profile-sidebar {
+.header-profile {
   display: inline-block;
   margin-right: 90px; }
-  .header-profile img, .user-profile-sidebar img {
+  .header-profile img {
     width: 70px;
     border-radius: 50px; }
-  .header-profile span, .user-profile-sidebar span {
+  .header-profile span {
     display: block; }
-    .header-profile span a, .user-profile-sidebar span a {
+    .header-profile span a {
       color: #000; }
-      .header-profile span a:hover, .user-profile-sidebar span a:hover {
+      .header-profile span a:hover {
         color: #000; }
 
 .front-page {
@@ -712,6 +712,10 @@ body {
 .list-item:hover {
   background-color: #e7f2fa; }
 
+.nav-pills .btn-primary {
+  background: #009688;
+  border: none; }
+
 .nav-pills li:nth-child(2) {
   margin-left: 4px; }
 
@@ -764,3 +768,51 @@ body {
     font-style: italic; }
   .post-comment-section .post-com-body {
     font-family: 'Indie Flower', cursive; }
+
+.home-left {
+  padding-bottom: 100px;
+  padding-left: 30px; }
+  .home-left h4 {
+    font-family: 'Indie Flower', cursive; }
+
+.user-profile-sidebar {
+  width: 100%;
+  margin: auto;
+  margin-top: 5em; }
+  .user-profile-sidebar img {
+    width: 130px;
+    border-radius: 50px; }
+  .user-profile-sidebar span {
+    padding: 5px;
+    display: block;
+    font-size: 20px; }
+    .user-profile-sidebar span a {
+      color: #000000; }
+      .user-profile-sidebar span a:hover {
+        color: #000; }
+
+.sidebar-birthday {
+  margin: 60px 0 0; }
+
+.sidebar-interesdet {
+  margin: 60px 0 0; }
+  .sidebar-interesdet ul {
+    padding: 0;
+    margin: 0; }
+  .sidebar-interesdet ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 10px;
+    margin: 5px 0;
+    background: #009688;
+    border-radius: 5px; }
+    .sidebar-interesdet ul li i {
+      color: #fff;
+      font-weight: 400; }
+
+.sidebar-about {
+  margin: 60px 0 0; }
+
+.sidebar-gallery img {
+  width: 100%;
+  cursor: pointer; }

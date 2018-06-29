@@ -17,7 +17,7 @@ h1,p,span,li,input::placeholder{
 #navbarSupportedContent{
     display: $inb!important;
 }
-.header-profile,.user-profile-sidebar{
+.header-profile{
     display: $inb;
     margin-right: 90px;
      img {
@@ -864,8 +864,13 @@ position: relative;
 
 //შიდა გვერდი პოსტები 
 .nav-pills{
+    .btn-primary{
+        background: #009688;
+        border:none;
+    }
     li:nth-child(2) {
         margin-left: 4px;
+       
     }
 }
  .tab-pane{
@@ -932,5 +937,77 @@ position: relative;
     }
     .post-com-body{
         font-family: 'Indie Flower', cursive;
+    }
+}
+
+
+
+
+
+
+
+//პროფილის გვერდი 
+
+// მარცხენა საიდბარი
+.home-left{
+    padding-bottom: 100px;
+    padding-left: 30px;
+    h4{
+        font-family: 'Indie Flower', cursive;
+    }
+}
+.user-profile-sidebar{
+    width: 100%;
+    margin: auto;
+    margin-top: 5em;
+    img{
+        width: 130px;
+        border-radius: 50px;
+    }
+    span {
+        padding: 5px;
+        display: block;
+        font-size: 20px;
+        a {
+            color: #000000;
+        
+        &:hover{
+            color: #000;
+        }
+    }
+    }
+}
+.sidebar-birthday{
+    margin: 60px 0 0;
+}
+.sidebar-interesdet{
+    margin: 60px 0 0;
+    ul{
+        padding: 0;
+        margin: 0;
+    }
+    ul li{
+        list-style-type: none;
+        display:$inb;
+        padding:0 10px;
+        margin: 5px 0;
+        background: #009688;
+        border-radius: 5px;
+        i{
+            color: #fff;
+            font-weight: 400;
+        }
+    }
+}
+
+.sidebar-about{
+    margin: 60px 0 0;
+}
+
+
+.sidebar-gallery {
+    img{
+        width: 100%;
+        cursor: pointer;
     }
 }
