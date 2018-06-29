@@ -152,7 +152,7 @@
                                 </div>
                                 <div class="col-10">
                                     <div class="comment-text">
-                                        <p class="name post-com-name">@{{comment.user.name}} <span class="time post-com-time">2 hours ago</span> </p>
+                                        <p class="name post-com-name">@{{comment.user.name}} <span class="time post-com-time">@{{comment.created_at}}</span> </p>
                                         <p class="post-com-body">@{{comment.body}}</p>
                                     </div>
                                 </div>
