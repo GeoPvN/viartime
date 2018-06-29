@@ -35,7 +35,7 @@ class HomeController extends Controller
         if ($user==null) {
             abort(404);
         }
-        $posts = Post::where('user_id', $user->id)->get();
+        $posts = Post::where('user_id', $user->id)->orderBy('id', 'desc')->get();
 
         return view('profile', ['posts'=>$posts]);
 
