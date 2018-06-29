@@ -147,7 +147,7 @@
                 <div class="home-up-box">
                     <div class="up-title">
                         <div class="row">
-                            <div class="col-lg-9"><h3><a href="#" class="home-news-title">@{{item.title}}</a></h3>
+                            <div class="col-lg-9"><h3><a v-bind:href="'/post/'+ item.id" class="home-news-title">@{{item.title}}</a></h3>
                         <p class="watch-date" title="date"><i class="fas fa-calendar-alt"></i> @{{item.created_at}}</p></div>
                             <div class="col-lg-3"><div class="up-save">
                         <p><a href="#" v-on:click="savePost(item)"> <span v-if="item.saved == 0"> <i class="far fa-save"><span> Save </span></i></span><span v-else><i class="fas fa-tags"><span> Saved </span></i></span></a></p>
@@ -201,7 +201,7 @@
 
                     
                     </div><!--ფოტო-->
-                       <div class="col-lg-7 up-person"><p><a href="#">@{{item.user_name}}</a></p><span><a href="#"> 0123456</a></span></div>
+                       <div class="col-lg-7 up-person"><p><a v-bind:href="'/user/'+ item.ip">@{{item.user_name}}</a></p><span><a href="{{url('user/'. Auth::user()->ip)}}"> {{ Auth::user()->ip}}</a></span></div>
                        <div class="col-lg-3 see-full">
                        <div class="front-seefull">
                 <a v-bind:href="'/post/'+ item.id">Read More</a>
@@ -227,7 +227,7 @@
       <h2 class="title">Contacts</h2>
       <ul class="list" id="list">
         @foreach($users as $user)
-        <li class="list-item"><i class="fas fa-circle"> <span>{{$user->name}}   </span></i></li>
+        <li class="list-item"><span>{{$user->name}}   </span></li>
         @endforeach
 
       </ul>

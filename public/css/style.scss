@@ -1,3 +1,4 @@
+$inb : inline-block;
 body{
     padding: 0;
     margin:0;
@@ -8,6 +9,31 @@ body{
 h1,p,span,li,input::placeholder{
    
 }
+
+
+// ჰედერი 
+
+
+#navbarSupportedContent{
+    display: $inb!important;
+}
+.header-profile,.user-profile-sidebar{
+    display: $inb;
+    margin-right: 90px;
+     img {
+        width: 70px;
+        border-radius: 50px;
+     }
+     span{
+         display: block;
+         a{
+             color:#000;
+             &:hover{
+                 color: #000;
+             }
+         }
+     }
+  }
 .front-page{
     //background-color: #edf0f5;
    // background-image: url(img/background.jpg);
@@ -146,66 +172,7 @@ box-shadow: 0px 6px 46px 0px rgba(204,198,204,1);
 
 
 
-// home page
 
-// .home-header{
-//     height: 70px;
-//     width: 100%;
-//     background-color:#fafafa;
-//     display:inline-block;
-//    .home-headleft{
-//     height: 70px;
-//     position: relative;
-//     display: inline-block;
-//     width: 100%;
-//     form{
-//         display: inline-block;
-//         margin-left: 160px;
-//     }
-//     input[type=text] {
-//         width: 130px;
-//         box-sizing: border-box;
-//         border: 2px solid #ccc;
-//         border-radius: 4px;
-//         font-size: 16px;
-//         background-color: white;
-//         background-image: url('searchicon.png');
-//         background-position: 10px 10px; 
-//         background-repeat: no-repeat;
-//         padding: 12px 20px 12px 40px;
-//         -webkit-transition: width 0.4s ease-in-out;
-//         transition: width 0.4s ease-in-out;
-//     }
-    
-//     input[type=text]:focus {
-//         width: 100%;
-//     }
-//     .head-logo{
-//         width: 60px;
-//         position: relative;
-//         padding: 10px;
-//         margin-left: 30px;
-
-//     }
-//     .talking_head{
-//         width: 150px;
-//         margin: 10px 30px;
-//         position: absolute;
-//         left: 69px;
-//         top: -10px;
-//     }
-//  }
-//  .home-headright{
-//      width: 100%;
-//      display: inline-block;
-//      height: 70px;
-//      margin: 0;
-   
-//      p{
-//         padding: 20px;
-//      }
-//  }
-// }
 
 
 
@@ -247,15 +214,15 @@ input[type=text]:focus {
 #demo {
     position: absolute;
     z-index: 999;
-    width: 90%;
+    width: 40%;
     top: 160px;
-    left:100px;
+    left: 141px;
 }
 #filter{
     position: absolute;
     z-index: 999;
     top: 160px;
-    left:100px;
+    left: 141px;
     width:300px;
     select {
         width:100%;
@@ -895,8 +862,33 @@ position: relative;
 
 
 
+//შიდა გვერდი პოსტები 
+.nav-pills{
+    li:nth-child(2) {
+        margin-left: 4px;
+    }
+}
+ .tab-pane{
+     margin-top: 1.5em;
+     height: 700px;
+     overflow-x: hidden;
+     overflow-y: scroll;
+ }
+ .tab-content{
+    -webkit-box-shadow: 0px 0px 42px -3px rgba(176,169,176,1);
+    -moz-box-shadow: 0px 0px 42px -3px rgba(176,169,176,1);
+    box-shadow: 0px 0px 42px -3px rgba(176,169,176,1);
+    border-radius: 5px;
+    
+    .list-group:first-child{
+        margin-top: 0;
+    }
+
+ }
+
 
 //   შიდა გვერდი - კომენტარები
+
 .add-comments-box{
     margin-top: 5em;
     textarea {
@@ -907,8 +899,8 @@ position: relative;
 .post-comment-section{
     margin-top: 1rem;
     margin-bottom: 5rem;
-    height: auto; 
-    overflow-y: hidden;
+    max-height: 600px; 
+    overflow-y: scroll;
     overflow-x: hidden;
  
     .comment-section-title{

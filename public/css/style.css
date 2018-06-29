@@ -3,6 +3,22 @@ body {
   margin: 0;
   overflow-x: hidden; }
 
+#navbarSupportedContent {
+  display: inline-block !important; }
+
+.header-profile, .user-profile-sidebar {
+  display: inline-block;
+  margin-right: 90px; }
+  .header-profile img, .user-profile-sidebar img {
+    width: 70px;
+    border-radius: 50px; }
+  .header-profile span, .user-profile-sidebar span {
+    display: block; }
+    .header-profile span a, .user-profile-sidebar span a {
+      color: #000; }
+      .header-profile span a:hover, .user-profile-sidebar span a:hover {
+        color: #000; }
+
 .front-page {
   height: 100vh;
   background-size: cover;
@@ -128,15 +144,15 @@ body {
 #demo {
   position: absolute;
   z-index: 999;
-  width: 90%;
+  width: 40%;
   top: 160px;
-  left: 100px; }
+  left: 141px; }
 
 #filter {
   position: absolute;
   z-index: 999;
   top: 160px;
-  left: 100px;
+  left: 141px;
   width: 300px; }
   #filter select {
     width: 100%;
@@ -696,6 +712,23 @@ body {
 .list-item:hover {
   background-color: #e7f2fa; }
 
+.nav-pills li:nth-child(2) {
+  margin-left: 4px; }
+
+.tab-pane {
+  margin-top: 1.5em;
+  height: 700px;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+
+.tab-content {
+  -webkit-box-shadow: 0px 0px 42px -3px #b0a9b0;
+  -moz-box-shadow: 0px 0px 42px -3px #b0a9b0;
+  box-shadow: 0px 0px 42px -3px #b0a9b0;
+  border-radius: 5px; }
+  .tab-content .list-group:first-child {
+    margin-top: 0; }
+
 .add-comments-box {
   margin-top: 5em; }
   .add-comments-box textarea {
@@ -705,8 +738,8 @@ body {
 .post-comment-section {
   margin-top: 1rem;
   margin-bottom: 5rem;
-  height: auto;
-  overflow-y: hidden;
+  max-height: 600px;
+  overflow-y: scroll;
   overflow-x: hidden; }
   .post-comment-section .comment-section-title {
     width: 100%;

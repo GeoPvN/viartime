@@ -1,7 +1,8 @@
+
 <nav class="navbar navbar-expand-md navbar-light navbar-laravel bg-light">
-            
+            <div class="col-6">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                <a href="#"><img src="{{asset('img/logo.png')}}" alt="" class="home-logo"></a>
+                <a href="{{asset('/home')}}"><img src="{{asset('img/logo.png')}}" alt="" class="home-logo"></a>
                
                
 
@@ -14,9 +15,27 @@
                 
 
                 <input type="text" name="search" placeholder="Search..">
+
+            </div><!--col end -->
+            <div class="col-6 text-right">
+                <div class="header-profile">
+                    <div class="row">
+                            <div class="col-6">
+                                <a href="{{url('user/'. Auth::user()->ip)}}"><img src="http://127.0.0.1:8000/img/animated.gif" alt=""></a>
+                            </div>
+                            <div class="col-6">
+                                <span><a href="{{url('user/'. Auth::user()->ip)}}">{{ Auth::user()->name }}</a></span>
+                                <span><a href="{{url('user/'. Auth::user()->ip)}}">{{ Auth::user()->ip}}</a></span>
+                                <span><a href="{{url('user/'. Auth::user()->ip)}}">4.5</a></span>
+                            </div>
+                    </div> <!-- row -->
+                </div><!-- header profile -->
+
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -25,7 +44,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav">
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -37,7 +56,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    User <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -60,4 +79,5 @@
                     </ul>
                 </div>
             
+                </div><!--col end -->
         </nav>
