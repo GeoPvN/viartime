@@ -13,7 +13,7 @@
 								<div class="col-6 text-left">
 									<span><a href="{{url('user/'. Auth::user()->ip)}}"><i class="fas fa-user"> {{ Auth::user()->name }}</i></a></span>
 									<span><a href="{{url('user/'. Auth::user()->ip)}}"><i class="fas fa-id-card"> {{ Auth::user()->ip}}</i></a></span>
-									<span><a href="{{url('user/'. Auth::user()->ip)}}"><i class="fas fa-star"> 4.5 </i></a></span>
+									<span><a href="{{url('user/'. Auth::user()->ip)}}"><i class="fas fa-star"> {{$raiting}} </i></a></span>
 								</div>
 						</div> <!-- row -->
 					</div><!-- user profile sidebar -->
