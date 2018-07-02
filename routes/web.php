@@ -33,3 +33,6 @@ Route::post('star', 'RaitingController@star');
 
 
 Route::post('/post/{post}/comment', 'CommentController@store');
+Route::get('rules', function(){
+	return view('rules');
+});
