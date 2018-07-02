@@ -1,32 +1,24 @@
-
+<div class="head-container">
 <nav class="navbar navbar-expand-md navbar-light navbar-laravel bg-light">
             <div class="col-6">
                 <a class="navbar-brand" href="{{ url('/') }}">
                 <a href="{{asset('/home')}}"><img src="{{asset('img/logo.png')}}" alt="" class="home-logo"></a>
                
                
-
-
-
-
-
-
-
-                
-
-                <input type="text" name="search" placeholder="Search..">
+ <input type="text" name="search" placeholder="Search..">
 
             </div><!--col end -->
             <div class="col-6 text-right">
                 <div class="header-profile">
                     <div class="row">
-                            <div class="col-6">
+                            <div class="col-3">
                                 <a href="{{url('user/'. Auth::user()->ip)}}"><img src="http://127.0.0.1:8000/img/animated.gif" alt=""></a>
+                                <div class="notification"><span>1</span></div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-9">
                                 <span><a href="{{url('user/'. Auth::user()->ip)}}">{{ Auth::user()->name }}</a></span>
                                 <span><a href="{{url('user/'. Auth::user()->ip)}}">{{ Auth::user()->ip}}</a></span>
-                                <span><a href="{{url('user/'. Auth::user()->ip)}}">4.5</a></span>
+                                <span class="point-rating"><a href="{{url('user/'. Auth::user()->ip)}}">4.5</a></span>
                             </div>
                     </div> <!-- row -->
                 </div><!-- header profile -->
@@ -80,4 +72,4 @@
                 </div>
             
                 </div><!--col end -->
-        </nav>
+        </nav></div>

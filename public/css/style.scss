@@ -13,27 +13,52 @@ h1,p,span,li,input::placeholder{
 
 // ჰედერი 
 
-
+.head-container{
+    background: #f8f9fa;
+}
 #navbarSupportedContent{
     display: $inb!important;
 }
 .header-profile{
     display: $inb;
     margin-right: 90px;
+    text-align: left;
      img {
-        width: 70px;
+        width: 40px;
         border-radius: 50px;
+        position: relative;
+     }
+     .notification{
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        padding: 4px 5px;
+        border-radius: 50px;
+        width: 30px;
+        height: 30px;    
+        background: grey;
+        color: rgb(255, 255, 255);
+        text-align: center;
      }
      span{
          display: block;
+         font-size: 13px;
          a{
-             color:#000;
+             color:#454545;
              &:hover{
-                 color: #000;
+                 color: #454545;
              }
          }
      }
   }
+//   .point-rating{
+//     background: yellow;
+//     border-radius: 50px;
+//     padding: 2px 5px;
+//     width: 30px;
+//     height: 30px;
+//     color: #000;
+//   }
 .front-page{
     //background-color: #edf0f5;
    // background-image: url(img/background.jpg);
@@ -179,6 +204,8 @@ box-shadow: 0px 6px 46px 0px rgba(204,198,204,1);
 // -----home-navbar-----
 .navbar-laravel{
    padding: 20px 40px;
+   width: 80%;
+   margin: auto;
 input[type=text] {
     width: 130px;
     box-sizing: border-box;
@@ -280,7 +307,7 @@ input[type=text]:focus {
         padding: 0;
     }
     a{
-        color:#000;
+        color:#545454;
         font-size:17px;
         cursor: pointer;
     }
@@ -403,6 +430,7 @@ position: relative;
     text-align:center;
     position: absolute;
     left: 0;
+    color: #545454;
     -webkit-transition-delay: 2s;
   -moz-transition-delay: 2s;
   -o-transition-delay: 2s;
@@ -467,8 +495,6 @@ position: relative;
 //    კომენტარები
 
   #container {
-    background: #fff;
-    box-shadow: 0px 5px 50px rgba(0,0,0,.2);
     margin: auto;
     padding: 10px;
     position: relative;
@@ -485,7 +511,7 @@ position: relative;
 
   .comment {
     margin-top: 30px;
-    padding: 10px;
+    padding: 0;
   }
   
   .photo {
@@ -694,6 +720,10 @@ position: relative;
     color: #666;
     width: 100%;
     cursor: pointer;
+    img{
+        width: 30px;
+        border-radius: 50px;
+    }
     .fa-window-close{
         position: absolute;
         z-index: 9999999999;
@@ -893,12 +923,24 @@ position: relative;
 
 
 //   შიდა გვერდი - კომენტარები
-
+.comment-layaut{
+    width: 100%;
+    img{
+        width: 40px;
+    }
+    .comments-img{
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+}
 .add-comments-box{
     margin-top: 5em;
     textarea {
-        height: 256px;
-        resize: none;
+        margin: 0!important;
+        padding: 0;
+        display: $inb;
+        height: 42px;
+        border-radius: 20px;
     }
 }
 .post-comment-section{

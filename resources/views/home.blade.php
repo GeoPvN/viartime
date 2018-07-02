@@ -90,7 +90,7 @@
          <div class="col-lg-4">
 
     <div id="container">
-        <h3>COMMENTS (45)</h3>
+        <h3>COMMENTS</h3>
         
 
         <div class="comment">
@@ -244,7 +244,7 @@
 <section class="msger">
   <header class="msger-header">
     <div class="msger-header-title">
-      <i class="fas fa-comment-alt"></i> ViarTime-Chat
+    <img src="http://127.0.0.1:8000/img/animated.gif" alt=""> <span>Mark Zuckenberg</span> <span class="point-rating">4.5</span>
       <i class="fas fa-window-close messclose"></i>
     </div>
     <div class="msger-header-options">

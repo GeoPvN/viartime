@@ -71,10 +71,19 @@
         <div class="add-comments-box">
                     <div class="comment-section-title text-center"><h3>Comments</h3></div>
                    {{-- <div v-html="postId">{{$post->id}}</div> --}}
-    <textarea v-model="commentBox" class="form-control" id="" cols="1" rows="5" style="margin-top: 1rem;"></textarea>
-                <div class="text-center">
-                    <button class="btn btn-primary pull-right"  @click="postComment()">Add Comment</button>
-                </div>
+                   <div class="row comment-layaut">
+                            <div class="col-1">
+                                    <div class="comments-img">
+                                            <img src="{{asset('img/animated.gif')}}" alt="">
+                                    </div>
+                            </div>
+                    <div class="col-11">
+                        <textarea v-model="commentBox" class="form-control" id="" cols="1" rows="5" style="margin-top: 1rem;"></textarea>
+                        <div class="text-center">
+                            <button class="btn btn-primary pull-right"  @click="postComment()">Add Comment</button>
+                        </div>
+                    </div>
+                    </div>
         </div>
 
                 <div class="post-comment-section">       
