@@ -12,7 +12,7 @@
                 <div class="header-profile">
                     <div class="row">
                             <div class="col-3">
-                                <a href="{{url('user/'. Auth::user()->ip)}}"><img src="http://127.0.0.1:8000/img/animated.gif" alt=""></a>
+                                <a href="#" data-toggle="collapse" data-target=".home-right"><img src="http://127.0.0.1:8000/img/animated.gif" alt=""></a>
                                 <div class="notification"><span>1</span></div>
                             </div>
                             <div class="col-9">

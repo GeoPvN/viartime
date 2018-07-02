@@ -837,6 +837,40 @@ position: relative;
 
 
 
+
+
+
+
+
+  // წესები 
+
+  .privat-box{
+      width: 80%;
+      margin: auto;
+      padding: 20px;
+       ul{
+           margin: 0;
+           padding: 0;
+            li{
+                list-style-type: none;
+                display: $inb;
+                padding-left: 10px;
+                 a{
+                     color: #545454;
+                     &:hover{
+                         color: #545454;
+                         text-decoration: none;
+                     }
+                 }
+            }
+       }
+       p{
+           padding-left: 10px;
+           color: #545454;
+       }
+  }
+
+
   
 
 
@@ -1052,4 +1086,35 @@ position: relative;
         width: 100%;
         cursor: pointer;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//წესები
+#rules-tab{
+    width: 80%;
+    margin: auto;
+     li {
+        margin-left: 10px;
+    }
+}
+.tab-pane{
+    overflow: hidden;
+    height: auto;
+    padding: 10px;
 }

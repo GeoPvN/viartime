@@ -221,18 +221,29 @@
     </div>
                     </div>  <!--home-center -->
                 </div>  <!-- center col -->
-                    <div class="col-3"><div class="home-right">
-                    <main class="container">
-    <div class="content">
-      <h2 class="title">Contacts</h2>
-      <ul class="list" id="list">
-        @foreach($users as $user)
-        <li class="list-item"><span>{{$user->name}}   </span></li>
-        @endforeach
 
-      </ul>
-    </div>
-  </main>
+                    <div class="col-3"><div class="collapse home-right">
+                        <main class="container">
+                          <div class="content">
+                            <h2 class="title">Contacts</h2>
+                            <ul class="list" id="list">
+                              @foreach($users as $user)
+                              <li class="list-item"><span>{{$user->name}}   </span></li>
+                              @endforeach
+
+                            </ul>
+                          </div>
+                         
+                    </main>
+                    <div class="privat-box">
+                            <ul>
+                              <li><a href="#"> Terms   </a></li>
+                              <li><a href="#"> Privacy </a></li>
+                              <li><a href="#"> Hari    </a></li>
+                              <li><a href="#"> Harale  </a></li>
+                            </ul>
+                            <p>&copy; ViarTime 2018</p>
+                          </div>
 
 
 
