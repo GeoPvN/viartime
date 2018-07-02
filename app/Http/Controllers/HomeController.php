@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use Auth;
 use App\Post;
+use App\UserSavedPosts;
 
 class HomeController extends Controller
 {
@@ -37,7 +38,13 @@ class HomeController extends Controller
         }
         $posts = Post::where('user_id', $user->id)->orderBy('id', 'desc')->get();
 
-        return view('profile', ['posts'=>$posts]);
+        $savePosts = UserSavedPosts::where('user_saved_posts.user_id', Auth::id())
+                ->leftJoin('posts', 'user_saved_posts.post_id', 'posts.id')
+                ->join('users', 'user_saved_posts.user_id', 'users.id')
+                ->orderBy('user_saved_posts.post_id', 'desc')
+                ->get();
+
+        return view('profile', ['posts'=>$posts, 'savePosts'=>$savePosts]);
 
     }
 }

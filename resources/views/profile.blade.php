@@ -100,7 +100,7 @@
 									<div class="up-title">
 										<div class="row">
 											<div class="col-lg-9">
-												<h3><a href="#" class="home-news-title">{{$post->title}}</a></h3>
+												<h3><a href="{{url('post/'. $post->id)}}" class="home-news-title">{{$post->title}}</a></h3>
 											</div>
 											<div class="col-lg-3">
 												<div class="up-save">
@@ -139,14 +139,14 @@
 				<div class="tab-pane" id="2a"> <!-- tab 2 -->
 		  <div class="text-center">Saved Posts</div>
 		  <!-- შენახული პოსტები -->
-		  @foreach($posts as $post)
+		  @foreach($savePosts as $post)
 							<ul class="list-group">
 								<div class="home-news-icon"></div>
 								<div class="home-up-box">
 									<div class="up-title">
 										<div class="row">
 											<div class="col-lg-9">
-												<h3><a href="#" class="home-news-title">{{$post->title}}</a></h3>
+												<h3><a href="{{url('post/'. $post->post_id)}}" class="home-news-title">{{$post->title}}</a></h3>
 											</div>
 											<div class="col-lg-3">
 												<div class="up-save">
@@ -167,8 +167,8 @@
 								 		<a href="#"><img src="{{asset('img/animated.gif')}}" alt=""></a>
 								 	</div>
 								 	<div class="col-lg-7 up-person">
-								 		<p><a href="#">{{$post->user->name}}</a></p>
-								 		<span><a href="#">{{$post->user->ip}}</a></span>
+								 		<p><a href="#">{{$post->name}}</a></p>
+								 		<span><a href="#">{{$post->ip}}</a></span>
 								 	</div>
 								 	<div class="col-lg-3 see-full">
 								 		<div class="front-seefull">
