@@ -92,7 +92,7 @@
     <div id="container">
         @foreach($posts as $post)
             <span style="height: 670px; display: block; overflow: hidden;">
-                <h3>COMMENTS <span>( 15 )</span></h3>
+                <h3>COMMENTS <span>( {{count($post->comments)}} )</span></h3>
                 @foreach($post->comments->take(3) as $p)
 
                     <div class="comment">
