@@ -90,55 +90,32 @@
          <div class="col-lg-4">
 
     <div id="container">
-        <h3>COMMENTS</h3>
-        
+        @foreach($posts as $post)
+            <span style="height: 350px; display: block; overflow: hidden;">
+                <h3>COMMENTS</h3>
+                @foreach($post->comments->take(3) as $p)
 
-        <div class="comment">
-            <div class="row">
-            <div class="col-3">
-          <img src="https://scontent.ftbs5-1.fna.fbcdn.net/v/t31.0-8/24879691_1723230304375482_7123055198539894009_o.jpg?_nc_cat=0&oh=840e42e8ea0f40a67b1561e9b189edd3&oe=5BA154AD" class="photo">
-          </div>
-          <div class="col-9">
-          <div class="comment-text">
-            <p class="name">Nika Chikviladze <span class="time">2 hours ago</span> </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing. </p>
-          </div>
-          </div><!--row -->
-          </div>
-        </div> <!-- .comment -->
-       
-        <div class="comment">
-            <div class="row">
-            <div class="col-3">
-          <img src="https://scontent.ftbs5-1.fna.fbcdn.net/v/t1.0-9/22729159_1647312818666473_4538200486749203400_n.jpg?_nc_cat=0&oh=b75352ec703951b8f4c77dd500ceac02&oe=5BB4F4CA" class="photo">
-          </div>
-          <div class="col-9">
-          <div class="comment-text">
-            <p class="name">Iuri Sajaia <span class="time">2 hours ago</span> </p>
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
-          </div>
-          </div><!--row -->
-          </div>
-        </div> <!-- .comment -->
-        
-        
-        <div class="comment">
-            <div class="row">
-            <div class="col-3">
-          <img src="https://scontent.ftbs5-1.fna.fbcdn.net/v/t1.0-9/35400618_1962869210412821_6390256396885032960_n.jpg?_nc_cat=0&oh=a6299665e80131b0ce6eb7cb0cc67600&oe=5BB0B1B6" class="photo">
-          </div>
-          <div class="col-9">
-          <div class="comment-text">
-            <p class="name">Davit Papalashvili <span class="time">3 hours ago</span> </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, in.</p>
-          </div>
-          </div><!--row -->
-          </div>
-        </div> <!-- .comment -->
+                    <div class="comment">
+                        <div class="row">
+                            <div class="col-3">
+                                <img src="http://127.0.0.1:8000/img/animated.gif" class="photo">
+                            </div>
+                            <div class="col-9">
+                                <div class="comment-text">
+                                    <p class="name">{{$p->user->name}}<span class="time">{{$p->created_at}}</span> </p>
+                                    <p>{{$p->body}} </p>
+                                </div>
+                            </div><!--row -->
+                        </div>
+                    </div> <!-- .comment -->
+                @endforeach
+            </span>
 
-        
+            @endforeach
+
+
       </div> <!-- #container -->
-         
+
          </div>
          <div class="col-lg-8">
          <ul class="list-group" v-for="item in posts" :key="item.key" >

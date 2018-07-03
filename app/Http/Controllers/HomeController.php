@@ -29,7 +29,10 @@ class HomeController extends Controller
     public function index()
     {
         $users = User::where('id', '!=', Auth::id())->get();
-        return view('home', ['users'=>$users]);
+        $posts = Post::all()->sortByDesc('id');
+
+
+        return view('home', ['users'=>$users, 'posts'=>$posts]);
     }
     public function show($ip)
     {
