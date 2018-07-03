@@ -30,6 +30,7 @@ class HomeController extends Controller
     {
         $users = User::where('id', '!=', Auth::id())->get();
         $posts = Post::all()->sortByDesc('id');
+//        dd(1);
 
 
         return view('home', ['users'=>$users, 'posts'=>$posts]);
