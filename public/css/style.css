@@ -36,6 +36,9 @@ body {
       .header-profile span a:hover {
         color: #454545; }
 
+#app {
+  padding-bottom: 40px; }
+
 .front-page {
   height: 100vh;
   background-size: cover;
@@ -136,7 +139,7 @@ body {
     width: 130px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
     background-color: white;
@@ -696,7 +699,7 @@ body {
 .privat-box {
   width: 80%;
   margin: auto;
-  padding: 20px; }
+  padding: 35px; }
   .privat-box ul {
     margin: 0;
     padding: 0; }
@@ -871,8 +874,16 @@ body {
 #rules-tab {
   width: 80%;
   margin: auto; }
+  #rules-tab li:first-child {
+    margin-left: 0; }
   #rules-tab li {
-    margin-left: 10px; }
+    margin-left: 40px;
+    font-size: 20px; }
+    #rules-tab li a {
+      color: #000; }
+      #rules-tab li a:hover {
+        text-decoration: none;
+        color: #777; }
 
 .tab-pane {
   overflow: hidden;

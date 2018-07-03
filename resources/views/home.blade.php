@@ -86,7 +86,7 @@
 
 
      <!-- პოსტი---- -->
-     <div class="row" v-for="item in posts" :key="item.key">
+     <div class="row">
          <div class="col-lg-4">
 
     <div id="container">
@@ -121,6 +121,7 @@
           </div>
         </div> <!-- .comment -->
         
+        
         <div class="comment">
             <div class="row">
             <div class="col-3">
@@ -140,7 +141,7 @@
          
          </div>
          <div class="col-lg-8">
-         <ul class="list-group" >
+         <ul class="list-group" v-for="item in posts" :key="item.key" >
                     <!-- <div class="home-news-icon">
                     <i class="fas fa-link"></i>
                  </div> -->
@@ -222,8 +223,9 @@
                     </div>  <!--home-center -->
                 </div>  <!-- center col -->
 
-                    <div class="col-3"><div class="collapse home-right">
-                        <main class="container">
+                    <div class="col-3">
+                    <div class=" home-right">
+                        <main class="collapse container" id="contact-box">
                           <div class="content">
                             <h2 class="title">Contacts</h2>
                             <ul class="list" id="list">
@@ -236,6 +238,10 @@
                          
                     </main>
                     <div class="privat-box">
+                              <select class="selectpicker" data-width="fit">
+                                <option data-content='<span class="flag-icon flag-icon-us"></span> English'>English</option>
+                                <option  data-content='<span class="flag-icon flag-icon-mx"></span> Español'>Español</option>
+                              </select>
                             <ul>
                               <li><a href="#"> Terms   </a></li>
                               <li><a href="#"> Privacy </a></li>

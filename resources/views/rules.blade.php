@@ -5,11 +5,11 @@
 <div id="rules-tab">
 
 <ul  class="nav">
-    <li class="active"><a  href="#tab1" data-toggle="tab"><button type="button" class="btn btn-primary">Overview</button></a></li>
-    <li><a href="#tab2" data-toggle="tab"><button type="button" class="btn btn-primary">Privacy Policy</button></a></li>
-    <li><a href="#tab3" data-toggle="tab"><button type="button" class="btn btn-primary">Terms Of Service</button></a></li>
-    <li><a href="#tab4" data-toggle="tab"><button type="button" class="btn btn-primary">Principles</button></a></li>
-    <li><a href="#tab5" data-toggle="tab"><button type="button" class="btn btn-primary">FAQ</button></a></li>	
+    <li class="active"><a  href="#tab1" data-toggle="tab">Overview</a></li>
+    <li><a href="#tab2" data-toggle="tab">Privacy Policy</a></li>
+    <li><a href="#tab3" data-toggle="tab">Terms Of Service</a></li>
+    <li><a href="#tab4" data-toggle="tab">Principles</a></li>
+    <li><a href="#tab5" data-toggle="tab">FAQ</a></li>	
 </ul>
 
 
