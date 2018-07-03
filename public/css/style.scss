@@ -2,6 +2,7 @@ $inb : inline-block;
 body{
     padding: 0;
     margin:0;
+    background: #e9ebee;
     
     
     overflow-x: hidden;
@@ -332,7 +333,7 @@ input[type=text]:focus {
    text-align: right;
 }
 .news-down-watch {
-    padding: 20px 0px;
+    padding: 10px 0px;
     .watch-number,.user-watch-time,.watch-date,.user-comments{
         display: inline-block;
         padding-right: 15px;
@@ -379,9 +380,10 @@ a:hover{
     padding: 20px;
     margin-top: 40px;
     border-radius: 5px;
-    -webkit-box-shadow: 2px 7px 50px -12px rgba(68,102,96,1);
--moz-box-shadow: 2px 7px 50px -12px rgba(68,102,96,1);
-box-shadow: 2px 7px 50px -12px rgba(68,102,96,1);
+    height: 630px;
+//     -webkit-box-shadow: 2px 7px 50px -12px rgba(68,102,96,1);
+// -moz-box-shadow: 2px 7px 50px -12px rgba(68,102,96,1);
+// box-shadow: 2px 7px 50px -12px rgba(68,102,96,1);
 // border-top: 8px solid #009688;
 position: relative;
  .home-news-icon{
@@ -409,6 +411,10 @@ position: relative;
     border-bottom: 1px solid #efe5e5;
     width: 100%;
     padding: 10px;
+    height: 450px;
+    background-image: url(http://media.liveauctiongroup.net/i/7919/9687142_1.jpg?v=8CCF6662CC4F640);
+    background-position: center center;
+    background-size: cover;
     p{
         overflow: hidden;
     display: -webkit-box;

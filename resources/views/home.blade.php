@@ -91,8 +91,8 @@
 
     <div id="container">
         @foreach($posts as $post)
-            <span style="height: 350px; display: block; overflow: hidden;">
-                <h3>COMMENTS</h3>
+            <span style="height: 670px; display: block; overflow: hidden;">
+                <h3>COMMENTS <span>( 15 )</span></h3>
                 @foreach($post->comments->take(3) as $p)
 
                     <div class="comment">
@@ -137,8 +137,8 @@
                     </div>
                     
                 </div>
-                <div class="home-content-box">
-               <p> @{{item.content}}</p>
+                <div class="home-content-box" style="background-image: url(http://media.liveauctiongroup.net/i/7919/9687142_1.jpg?v=8CCF6662CC4F640);">
+               <!-- <p> @{{item.content}}</p> -->
                 </div>
             
                 <div class="news-down-watch">

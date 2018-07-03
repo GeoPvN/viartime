@@ -1,6 +1,7 @@
 body {
   padding: 0;
   margin: 0;
+  background: #e9ebee;
   overflow-x: hidden; }
 
 .head-container {
@@ -236,7 +237,7 @@ body {
   text-align: right; }
 
 .news-down-watch {
-  padding: 20px 0px; }
+  padding: 10px 0px; }
   .news-down-watch .watch-number, .news-down-watch .user-watch-time, .news-down-watch .watch-date, .news-down-watch .user-comments {
     display: inline-block;
     padding-right: 15px;
@@ -274,9 +275,7 @@ body {
   padding: 20px;
   margin-top: 40px;
   border-radius: 5px;
-  -webkit-box-shadow: 2px 7px 50px -12px #446660;
-  -moz-box-shadow: 2px 7px 50px -12px #446660;
-  box-shadow: 2px 7px 50px -12px #446660;
+  height: 630px;
   position: relative; }
   .list-group .home-news-icon {
     position: absolute;
@@ -296,7 +295,11 @@ body {
 .home-content-box {
   border-bottom: 1px solid #efe5e5;
   width: 100%;
-  padding: 10px; }
+  padding: 10px;
+  height: 450px;
+  background-image: url(http://media.liveauctiongroup.net/i/7919/9687142_1.jpg?v=8CCF6662CC4F640);
+  background-position: center center;
+  background-size: cover; }
   .home-content-box p {
     overflow: hidden;
     display: -webkit-box;
