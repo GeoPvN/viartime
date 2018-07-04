@@ -183,9 +183,13 @@ body {
 button {
   border: none;
   border-radius: 5px;
-  background: #9c9898; }
-  button :hover {
-    background: red; }
+  background: #9c9898;
+  -webkit-transition: 0.8s ease;
+  -o-transition: 0.8s ease;
+  transition: 0.8s ease; }
+  button:hover {
+    background: #5f5d5d;
+    cursor: pointer; }
   button i {
     color: #fff; }
 

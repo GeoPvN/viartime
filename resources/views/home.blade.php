@@ -91,7 +91,7 @@
 
     <div id="container">
         @foreach($posts as $post)
-            <span style="height: 670px; display: block; overflow: hidden;padding-top:150px;">
+            <span style="height: 670px; display: block; overflow: hidden;padding-top:150px;" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="900" data-aos-once="true">
                 <h3><i class="fas fa-comments"> Comments  <span>( {{count($post->comments)}} )</span></i></h3>
                 @foreach($post->comments->take(3) as $p)
 
@@ -118,7 +118,7 @@
 
          </div>
          <div class="col-lg-8">
-         <ul class="list-group" v-for="item in posts" :key="item.key" >
+         <ul class="list-group" v-for="item in posts" :key="item.key" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="900" data-aos-once="true">
                     <!-- <div class="home-news-icon">
                     <i class="fas fa-link"></i>
                  </div> -->

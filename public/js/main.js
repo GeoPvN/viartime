@@ -1,3 +1,4 @@
+
 //ფილტრი და დაპოსტვა 
 $(document).ready(function(){
  $(".filter-button").click(function(){
@@ -132,3 +133,6 @@ function formatDate(date) {
 function random(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
+
+
+AOS.init();

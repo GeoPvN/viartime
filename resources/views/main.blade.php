@@ -5,6 +5,7 @@
   <title>Document</title>
   <meta charset="UTF-8">
    <title>Document</title>
+   <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
    <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -20,6 +21,7 @@
   
     <script src="{{ asset('js/main.js') }}" defer></script>
     <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     @yield('script')
 </body>
 </html>

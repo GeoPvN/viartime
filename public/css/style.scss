@@ -1,4 +1,6 @@
+
 $inb : inline-block;
+
 @font-face {
     font-family:fonts;
     src: url('Tahoma.ttf');
@@ -254,8 +256,10 @@ input[type=text]:focus {
     border:none;
     border-radius: 5px;
     background:#9c9898;
-    :hover{
-        background: red;
+    transition: 0.8s ease;
+    &:hover {
+        background: rgb(95, 93, 93);
+        cursor: pointer;
     }
     i{
         color: #fff;
