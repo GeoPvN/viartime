@@ -1,18 +1,28 @@
+@font-face {
+  font-family: fonts;
+  src: url("Tahoma.ttf"); }
+
 body {
   padding: 0;
   margin: 0;
   background: #e9ebee;
+  font-family: fonts;
   overflow-x: hidden; }
 
 .head-container {
-  background: #f8f9fa; }
+  background: #e2e1e1;
+  width: 100%;
+  position: fixed;
+  z-index: 9999999;
+  -webkit-box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.75); }
 
 #navbarSupportedContent {
   display: inline-block !important; }
 
 .header-profile {
   display: inline-block;
-  margin-right: 90px;
   text-align: left; }
   .header-profile img {
     width: 40px;
@@ -20,22 +30,27 @@ body {
     position: relative; }
   .header-profile .notification {
     position: absolute;
-    top: -12px;
+    top: -8px;
     left: -12px;
-    padding: 4px 5px;
+    padding: 7px 5px;
     border-radius: 50px;
     width: 30px;
     height: 30px;
     background: grey;
     color: white;
     text-align: center; }
+  .header-profile .head-user-name {
+    font-size: 16px; }
   .header-profile span {
     display: block;
-    font-size: 13px; }
+    font-size: 11px; }
     .header-profile span a {
       color: #454545; }
       .header-profile span a:hover {
         color: #454545; }
+
+.post-toogle {
+  padding-top: 120px; }
 
 #app {
   padding-bottom: 40px; }
@@ -99,7 +114,7 @@ body {
         border: 1px solid red; }
       .front-middle .front-right form .front-submit {
         background: white;
-        font-family: 'Shrikhand', cursive;
+        font-family: fonts;
         padding: 5px 0px;
         margin-top: 20px; }
       .front-middle .front-right form input[type='checkbox'] {
@@ -133,7 +148,7 @@ body {
       list-style-type: none; }
 
 .navbar-laravel {
-  padding: 20px 40px;
+  padding: 10px 40px;
   width: 80%;
   margin: auto; }
   .navbar-laravel input[type=text] {
@@ -147,7 +162,7 @@ body {
     background-image: url("searchicon.png");
     background-position: 10px 10px;
     background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
+    padding: 1px 5px 1px 40px;
     -webkit-transition: width 0.4s ease-in-out;
     -o-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
@@ -161,20 +176,30 @@ body {
   background-color: #009688;
   border-color: #009688; }
 
-.filter-button {
-  margin-left: 140px; }
+.head-buttons {
+  margin-left: 30px;
+  display: inline-block; }
+
+button {
+  border: none;
+  border-radius: 5px;
+  background: #9c9898; }
+  button :hover {
+    background: red; }
+  button i {
+    color: #fff; }
 
 #demo {
-  position: absolute;
+  position: fixed;
   z-index: 999;
   width: 40%;
-  top: 160px;
+  top: 78px;
   left: 141px; }
 
 #filter {
-  position: absolute;
+  position: fixed;
   z-index: 999;
-  top: 160px;
+  top: 78px;
   left: 141px;
   width: 300px; }
   #filter select {
@@ -187,11 +212,12 @@ body {
 
 .home-news-title {
   color: #000;
-  font-size: 22px;
+  font-size: 18px;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical; }
+  -webkit-box-orient: vertical;
+  font-family: fonts; }
 
 .up-save {
   text-align: right; }
@@ -222,7 +248,7 @@ body {
     padding: 0; }
   .up-person a {
     color: #545454;
-    font-size: 17px;
+    font-size: 14px;
     cursor: pointer; }
 
 .up-title {
@@ -230,14 +256,14 @@ body {
   padding: 10px;
   border-bottom: 1px solid #efe5e5; }
   .up-title .up-account {
-    margin-top: 10px; }
+    margin-top: 5px; }
 
 .news-down-watch {
   width: 100%;
   text-align: right; }
 
 .news-down-watch {
-  padding: 10px 0px; }
+  padding: 10px 0px 0px 0; }
   .news-down-watch .watch-number, .news-down-watch .user-watch-time, .news-down-watch .watch-date, .news-down-watch .user-comments {
     display: inline-block;
     padding-right: 15px;
@@ -272,11 +298,14 @@ body {
 
 .list-group {
   background: #fff;
-  padding: 20px;
-  margin-top: 40px;
+  margin-top: 10px;
   border-radius: 5px;
   height: 630px;
   position: relative; }
+  .list-group .home-up-box {
+    padding: 20px; }
+  .list-group .up-account {
+    padding: 30px 20px; }
   .list-group .home-news-icon {
     position: absolute;
     top: -34px;
@@ -297,7 +326,6 @@ body {
   width: 100%;
   padding: 10px;
   height: 450px;
-  background-image: url(http://media.liveauctiongroup.net/i/7919/9687142_1.jpg?v=8CCF6662CC4F640);
   background-position: center center;
   background-size: cover; }
   .home-content-box p {
@@ -326,6 +354,7 @@ body {
     position: absolute;
     left: 48px;
     top: 1px;
+    font-size: 14px;
     font-weight: bold; }
   .star-rating .rating {
     display: none;

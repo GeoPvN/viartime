@@ -9,8 +9,7 @@
                          
                          
      
-    <button type="button" class="btn btn-info filter-button" >Filter</button>
-     <button type="button" class="btn btn-info new-post-button" >Add New Post</button>
+    
        
      
      <div id="filter" class="collapse">
@@ -91,8 +90,8 @@
 
     <div id="container">
         @foreach($posts as $post)
-            <span style="height: 670px; display: block; overflow: hidden;">
-                <h3>COMMENTS <span>( {{count($post->comments)}} )</span></h3>
+            <span style="height: 670px; display: block; overflow: hidden;padding-top:150px;">
+                <h3><i class="fas fa-comments"> Comments  <span>( {{count($post->comments)}} )</span></i></h3>
                 @foreach($post->comments->take(3) as $p)
 
                     <div class="comment">
@@ -145,7 +144,7 @@
                 <span class="watch-number" title="views"><i class="far fa-eye"> @{{item.viwe}}</i></span>
                 <span class="user-watch-time" title="watching hours"><i class="far fa-clock"></i> 1 Hour</span>
                 
-                <span class="user-comments" title="comments"><i class="fas fa-comments"> ( 15 )</i></span>
+                <!-- <span class="user-comments" title="comments"><i class="fas fa-comments"> ( {{count($post->comments)}} ) </i></span> -->
                 
 
 
