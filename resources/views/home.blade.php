@@ -55,6 +55,7 @@
             <form class="form-group">
               <textarea rows="5" cols="5" class="form-control" v-model="description" ></textarea>
               <br>
+                <input type="file" class="form-control" @change="imageChanged">
 
               <br>
               <button :disabled="!description||!title||!content" class="btn btn-primary add-post-button" @click.prevent="postContent">Add Post</button>
@@ -136,10 +137,10 @@
                     </div>
                     
                 </div>
-                <div class="home-content-box" style="background-image: url(http://media.liveauctiongroup.net/i/7919/9687142_1.jpg?v=8CCF6662CC4F640);">
+                <div class="home-content-box" v-bind:style="{ 'background-image': 'url(http://127.0.0.1:8000/img/posts/' + item.image + ')' }">
                <!-- <p> @{{item.content}}</p> -->
                 </div>
-            
+
                 <div class="news-down-watch">
                 <span class="watch-number" title="views"><i class="far fa-eye"> @{{item.viwe}}</i></span>
                 <span class="user-watch-time" title="watching hours"><i class="far fa-clock"></i> 1 Hour</span>
@@ -313,16 +314,21 @@
           description:'',
           title:'',
           content:'',
-     saved:'Save',
-     star:0,
-          comments: {},
-          commentBox:'',
-          postId:'',
+          saved:'Save',
+          star:0,
+          image:'',
       },
       mounted(){
        this.getPosts();
       },
       methods:{
+          imageChanged(e){
+              var fileReader = new FileReader
+              fileReader.readAsDataURL(e.target.files[0])
+              fileReader.onload = (e)=>{
+                  this.image=e.target.result
+              }
+          },
        getPosts(){
          axios.get('getpost')
          .then((response)=>{
@@ -339,6 +345,7 @@
            description: this.description,
            title:this.title,
            content:this.content,
+             image:this.image,
          })
          .then((response)=>{
            this.posts.unshift(response.data);

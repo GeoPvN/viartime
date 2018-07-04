@@ -32,18 +32,31 @@ class PostsController extends Controller
 
     public function store(Request $request)
     {
+
     	$this->validate($request, ['description'=>'required', 'title'=>'required', 'content'=>'required']);
 
+
     	$post = new Post();
+    	$post->description = $request->description;
+        $post->title = $request->title;
+        $post->content = $request->content;
+        $post->user_id = Auth::id();
 
-    	$content = $post->create([
-            'description'=>$request->description,
-            'title'=>$request->title,
-    	    'content'=>$request->content,
-    	    'user_id'=>Auth::id(),
-    	]);
+        if($request->image!=null)
+        {
+            $exploaded = explode(',', $request->image);
+            $decode = base64_decode($exploaded[1]);
 
-    	$post = Post::where('id', $content->id)->first();
+            $name = str_random(). '.jpg';
+            $path = public_path(). '/img/posts/'. $name;
+
+            file_put_contents($path, $decode);
+            $post->image = $name;
+        }
+
+        $post->save();
+
+    	$post = Post::where('id', $post->id)->first();
 
     	return $post->toJson(); 
     }
