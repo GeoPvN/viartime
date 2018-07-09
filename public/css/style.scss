@@ -400,7 +400,7 @@ a:hover{
         
 }
 .list-group{
-
+    display:none;
     background:#fff;
     
     margin-top: 10px;
@@ -555,7 +555,12 @@ position: relative;
     margin-top: 30px;
     padding: 0;
   }
-  
+  .comment-span{
+    height: 670px; 
+    display: block; 
+    overflow: hidden;
+    padding-top:150px;
+  }
   .photo {
     width: 60px;
     height: 60px;
